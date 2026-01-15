@@ -45,18 +45,18 @@ const Header: React.FC = () => {
           <div>
             <Link href='/'>
               <Image
-                src={'/images/header/dark-logo.svg'}
+                src={'/images/header/logo.svg'}
                 alt='logo'
-                width={150}
-                height={68}
+                width={68}
+                height={22}
                 unoptimized={true}
                 className={`${isHomepage ? sticky ? "block dark:hidden" : "hidden" : sticky ? "block dark:hidden" : "block dark:hidden"}`}
               />
               <Image
                 src={'/images/header/logo.svg'}
                 alt='logo'
-                width={150}
-                height={68}
+                width={68}
+                height={22}
                 unoptimized={true}
                 className={`${isHomepage ? sticky ? "hidden dark:block" : "block" : sticky ? "dark:block hidden" : "dark:block hidden"}`}
               />
@@ -73,7 +73,7 @@ const Header: React.FC = () => {
                 height={32}
                 className={`dark:hidden block ${isHomepage
                   ? sticky
-                    ? 'text-dark'
+                    ? 'text-primary'
                     : 'text-white'
                   : 'text-dark'
                   }`}
@@ -82,13 +82,13 @@ const Header: React.FC = () => {
                 icon={'solar:moon-bold'}
                 width={32}
                 height={32}
-                className='dark:block hidden text-white'
+                className={`dark:block hidden ${isHomepage && sticky ? 'text-primary' : 'text-white'}`}
               />
             </button>
             <div className={`hidden md:block`}>
               <Link href='#' className={`text-base text-inherit flex items-center gap-2 border-r pr-6 ${isHomepage
                 ? sticky
-                  ? 'text-dark dark:text-white hover:text-primary border-dark dark:border-white'
+                  ? 'text-primary hover:text-primary border-primary'
                   : 'text-white hover:text-primary'
                 : 'text-dark hover:text-primary'
                 }`}
@@ -102,7 +102,7 @@ const Header: React.FC = () => {
                 onClick={() => setNavbarOpen(!navbarOpen)}
                 className={`flex items-center gap-3 p-2 sm:px-5 sm:py-3 rounded-full font-semibold hover:cursor-pointer border ${isHomepage
                   ? sticky
-                    ? 'text-white bg-dark dark:bg-white dark:text-dark dark:hover:text-white dark:hover:bg-dark hover:text-dark hover:bg-white border-dark dark:border-white'
+                    ? 'text-white bg-primary border-primary hover:bg-white hover:text-primary'
                     : 'text-dark bg-white dark:text-dark hover:bg-transparent hover:text-white border-white'
                   : 'bg-dark text-white hover:bg-transparent hover:text-dark dark:bg-white dark:text-dark dark:hover:bg-transparent dark:hover:text-white duration-300'
                   }`}

@@ -77,19 +77,21 @@ const FeaturedProperty: React.FC = () => {
                 Featured property
               </p>
               <h2 className="lg:text-52 text-40 font-medium text-dark dark:text-white">
-                Modern luxe villa
+                Kelarisan Villa
               </h2>
               <div className="flex items-center gap-2.5">
                 <Icon icon="ph:map-pin" width={28} height={26} className="text-dark/50 dark:text-white/50" />
                 <p className="text-dark/50 dark:text-white/50 text-base">
-                  20 S Aurora Ave, Miami
+                  Graha Permata Regency, Blitar
                 </p>
               </div>
             </div>
             <p className="text-base text-dark/50 dark:text-white/50">
-              Experience luxury living at modern luxe villa, located at 20 S Aurora Ave, Miami. Priced at $1,650,500, this 560 ft² smart home offers 4 bedrooms,
-              3 bathrooms, and spacious living areas. Enjoy energy efficiency, natural light, security systems, outdoor spaces, and 2 bar areas—perfect for 8+
-              guests. Built in 2025.
+              Kelarisan Villa is a modern and comfortable villa designed for families or
+              groups seeking a private and relaxing stay. The villa features two floors with
+              three bedrooms, two bathrooms, a cozy sitting room, a fully equipped 
+              kitchen, a smart TV, a private swimming pool, and a convenient parking area,
+              ensuring a pleasant and enjoyable experience.
             </p>
             <div className="grid grid-cols-2 gap-10">
               <div className="flex items-center gap-4">
@@ -111,7 +113,7 @@ const FeaturedProperty: React.FC = () => {
                     unoptimized={true}
                   />
                 </div>
-                <h6 className="">4 Bedrooms</h6>
+                <h6 className="">3 Bedrooms</h6>
               </div>
               <div className="flex items-center gap-4">
                 <div className="bg-dark/5 dark:bg-white/5 p-2.5 rounded-[6px]">
@@ -132,7 +134,7 @@ const FeaturedProperty: React.FC = () => {
                     unoptimized={true}
                   />
                 </div>
-                <h6 className="">3 Bathrooms</h6>
+                <h6 className="">2 Bathrooms</h6>
               </div>
               <div className="flex items-center gap-4">
                 <div className="bg-dark/5 dark:bg-white/5 p-2.5 rounded-[6px]">
@@ -174,16 +176,16 @@ const FeaturedProperty: React.FC = () => {
                     unoptimized={true}
                   />
                 </div>
-                <h6 className="">2 Bar areas</h6>
+                <h6 className="">Private Pool</h6>
               </div>
             </div>
             <div className="flex gap-10">
               <Link href="/contactus" className="py-4 px-8 bg-primary hover:bg-dark duration-300 rounded-full text-white">
-                Get in touch
+                View Details
               </Link>
               <div>
                 <h4 className="text-3xl text-dark dark:text-white font-medium">
-                  $1,650,500
+                  Rp. 650.000,00 /Day
                 </h4>
                 <p className="text-base text-dark/50">
                   Discounted price
