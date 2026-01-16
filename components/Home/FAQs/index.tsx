@@ -28,29 +28,29 @@ const FAQ: React.FC = () => {
                             FAQs
                         </p>
                         <h2 className='lg:text-52 text-40 leading-[1.2] font-medium text-dark dark:text-white'>
-                            Everything about Homely homes
+                            Things You Need to Know
                         </h2>
                         <p className='text-dark/50 dark:text-white/50 pr-20'>
-                            We know that buying, selling, or investing in real estate can be overwhelming. Here are some frequently asked questions to help guide you through the process
+                            Find answers to the most common questions about our villa, facilities, and booking process.
                         </p>
                         <div className="my-8">
                             <Accordion type="single" defaultValue="item-1" collapsible className="w-full flex flex-col gap-6">
                                 <AccordionItem value="item-1">
-                                    <AccordionTrigger>1. Can I personalize my homely home?</AccordionTrigger>
+                                    <AccordionTrigger>1. Is parking available at the villa?</AccordionTrigger>
                                     <AccordionContent>
                                         Discover a diverse range of premium properties, from luxurious apartments to spacious villas, tailored to your needs.
                                     </AccordionContent>
                                 </AccordionItem>
                                 <AccordionItem value="item-2">
-                                    <AccordionTrigger>2. Where can I find homely homes?</AccordionTrigger>
+                                    <AccordionTrigger>2. Is the private pool available for all guests?</AccordionTrigger>
                                     <AccordionContent>
                                         Discover a diverse range of premium properties, from luxurious apartments to spacious villas, tailored to your needs.
                                     </AccordionContent>
                                 </AccordionItem>
                                 <AccordionItem value="item-3">
-                                    <AccordionTrigger>3. What steps to buy a homely?</AccordionTrigger>
+                                    <AccordionTrigger>3. What time is check-in and check-out?</AccordionTrigger>
                                     <AccordionContent>
-                                        Discover a diverse range of premium properties, from luxurious apartments to spacious villas, tailored to your needs.
+                                        Check-in starts at 13:00 to allow our team to prepare the villa for your arrival. Check-out is at 12:00, and we kindly ask guests to respect these times to maintain comfort and service quality.
                                     </AccordionContent>
                                 </AccordionItem>
                             </Accordion>

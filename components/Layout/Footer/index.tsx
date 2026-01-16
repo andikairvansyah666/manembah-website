@@ -8,8 +8,9 @@ const Footer = () => {
       <div className="container mx-auto max-w-8xl pt-14 px-4 sm:px-6 lg:px-0">
         <div className="flex lg:items-center justify-between items-end lg:gap-11 pb-14 border-b border-white/10 lg:flex-nowrap flex-wrap gap-6">
           <p className="text-white text-sm lg:max-w-1/5">
-            Stay updated with the latest news,
-            promotions, and exclusive offers.
+            Stay connected with Manembah
+            <br />
+            Get the latest updates, special offers, and exclusive villa promotions.
           </p>
           <div className="flex lg:flex-row flex-col items-center lg:gap-10 gap-3">
             <div className="flex gap-2 lg:order-1 order-2">
@@ -38,11 +39,12 @@ const Footer = () => {
           <div className="grid grid-cols-12 sm:gap-10 gap-y-6">
             <div className="md:col-span-7 col-span-12">
               <h2 className="text-white leading-[1.2] text-40 font-medium mb-6 lg:max-w-3/4">
-                Begin your path to
-                success contact us today.
+                Plan your perfect villa
+                <br />
+                stay with us.
               </h2>
               <Link href="/contactus" className="bg-primary text-base font-semibold py-4 px-8 rounded-full text-white hover:bg-white hover:text-primary duration-300 hover:cursor-pointer">
-                Get In Touch
+                Book Your Stay
               </Link>
             </div>
             <div className="md:col-span-3 sm:col-span-6 col-span-12">
@@ -71,7 +73,7 @@ const Footer = () => {
         </div>
         <div className="flex justify-between md:flex-nowrap flex-wrap items-center py-6 gap-6">
           <p className="text-white/40 text-sm ">
-            ©2025 Homely - Design & Developed by <Link href="https://getnextjstemplates.com/" className="hover:text-primary" target="_blanck">GetNextJs Templates</Link>
+            © 2026 Manembah Villa and HomeStay | All Rights Reserved.
           </p>
           <div className="flex gap-8 items-center">
             <Link href="#" className="text-white/40 hover:text-primary text-sm">

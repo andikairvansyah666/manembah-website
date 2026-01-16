@@ -50,7 +50,7 @@ const Testimonial = () => {
                         Testimonials
                     </p>
                     <h2 className="lg:text-52 text-40 font-medium text-white">
-                        What our clients say
+                        Reviews from Our Guests
                     </h2>
                 </div>
                 <Carousel

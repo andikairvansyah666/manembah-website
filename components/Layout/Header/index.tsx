@@ -94,7 +94,7 @@ const Header: React.FC = () => {
                 }`}
               >
                 <Icon icon={'ph:phone-bold'} width={24} height={24} />
-                +1-212-456-789
+                +62 821-3145-9670
               </Link>
             </div>
             <div>
@@ -172,10 +172,10 @@ const Header: React.FC = () => {
               Contact
             </p>
             <Link href="#" className='text-base sm:text-xm font-medium text-inherit hover:text-primary'>
-              hello@homely.com
+              contact@manembah.com
             </Link>
             <Link href="#" className='text-base sm:text-xm font-medium text-inherit hover:text-primary'>
-              +1-212-456-7890{' '}
+              +62 821-3145-9670{' '}
             </Link>
           </div>
         </div>

@@ -8,7 +8,7 @@
   --color-primary: #B0914F;
   --color-skyblue: #79adff;
   --color-lightskyblue: #9cc2dd;
-  --color-dark: #172023;
+  --color-dark: #131313;
 
   /* Shadow */
   --shadow-3xl: 0px 4px 6px -2px #0000000D, 0px 10px 15px -3px #0000001A;
@@ -21,6 +21,7 @@
   --text-40: 2.5rem;
   --text-52: 3.25rem;
   --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
 
   /* Breakpoint */
   --breakpoint-xs: 23.438rem;
