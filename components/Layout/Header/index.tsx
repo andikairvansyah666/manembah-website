@@ -13,6 +13,7 @@ const Header: React.FC = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   const { theme, setTheme } = useTheme()
   const pathname = usePathname()
+  const isHomepage = pathname === '/'
 
   const sideMenuRef = useRef<HTMLDivElement>(null)
 
@@ -36,7 +37,6 @@ const Header: React.FC = () => {
     }
   }, [handleScroll])
 
-  const isHomepage = pathname === '/'
 
   return (
     <header className={`fixed h-24 py-1 z-50 w-full bg-transparent transition-all duration-300 lg:px-0 px-4 ${sticky ? "top-3" : "top-0"}`}>
@@ -50,15 +50,15 @@ const Header: React.FC = () => {
                 width={68}
                 height={22}
                 unoptimized={true}
-                className={`${isHomepage ? sticky ? "block dark:hidden" : "hidden" : sticky ? "block dark:hidden" : "block dark:hidden"}`}
+                className={`${sticky ? "block dark:hidden" : isHomepage ? "hidden" : "block dark:hidden"}`}
               />
               <Image
-                src={'/images/header/logo.svg'}
+                src={!isHomepage && !sticky ? '/images/header/logo.svg' : '/images/header/logo.svg'}
                 alt='logo'
                 width={68}
                 height={22}
                 unoptimized={true}
-                className={`${isHomepage ? sticky ? "hidden dark:block" : "block" : sticky ? "dark:block hidden" : "dark:block hidden"}`}
+                className={`${sticky ? "hidden dark:block" : isHomepage ? "block" : "hidden dark:block"}`}
               />
             </Link>
           </div>
@@ -71,26 +71,21 @@ const Header: React.FC = () => {
                 icon={'solar:sun-bold'}
                 width={32}
                 height={32}
-                className={`dark:hidden block ${isHomepage
-                  ? sticky
-                    ? 'text-primary'
-                    : 'text-white'
-                  : 'text-dark'
-                  }`}
+                className={`dark:hidden block ${sticky ? 'text-primary' : isHomepage ? 'text-white' : 'text-[#131313]'}`}
               />
               <Icon
                 icon={'solar:moon-bold'}
                 width={32}
                 height={32}
-                className={`dark:block hidden ${isHomepage && sticky ? 'text-primary' : 'text-white'}`}
+                className={`dark:block hidden ${sticky ? 'text-primary' : isHomepage ? 'text-white' : 'text-white'}`}
               />
             </button>
             <div className={`hidden md:block`}>
-              <Link href='#' className={`text-base text-inherit flex items-center gap-2 border-r pr-6 ${isHomepage
-                ? sticky
+              <Link href='#' className={`text-base text-inherit flex items-center gap-2 border-r pr-6 ${sticky
                   ? 'text-primary hover:text-primary border-primary'
-                  : 'text-white hover:text-primary'
-                : 'text-dark hover:text-primary'
+                  : isHomepage
+                    ? 'text-white hover:text-primary'
+                    : 'text-[#131313] hover:text-primary'
                 }`}
               >
                 <Icon icon={'ph:phone-bold'} width={24} height={24} />
@@ -100,11 +95,11 @@ const Header: React.FC = () => {
             <div>
               <button
                 onClick={() => setNavbarOpen(!navbarOpen)}
-                className={`flex items-center gap-3 p-2 sm:px-5 sm:py-3 rounded-full font-semibold hover:cursor-pointer border ${isHomepage
-                  ? sticky
+                className={`flex items-center gap-3 p-2 sm:px-5 sm:py-3 rounded-full font-semibold hover:cursor-pointer border ${sticky
                     ? 'text-white bg-primary border-primary hover:bg-white hover:text-primary'
-                    : 'text-dark bg-white dark:text-dark hover:bg-transparent hover:text-white border-white'
-                  : 'bg-dark text-white hover:bg-transparent hover:text-dark dark:bg-white dark:text-dark dark:hover:bg-transparent dark:hover:text-white duration-300'
+                    : isHomepage
+                      ? 'text-dark bg-white dark:text-dark hover:bg-transparent hover:text-white border-white'
+                      : 'text-white bg-[#131313] hover:bg-transparent hover:text-[#131313] border-[#131313]'
                   }`}
                 aria-label='Toggle mobile menu'>
                 <span>
