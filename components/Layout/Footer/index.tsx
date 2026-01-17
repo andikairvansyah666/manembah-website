@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className="relative z-10 bg-dark">
       <div className="container mx-auto max-w-8xl pt-14 px-4 sm:px-6 lg:px-0">
-        <div className="flex lg:items-center justify-between items-end lg:gap-11 pb-14 border-b border-white/10 lg:flex-nowrap flex-wrap gap-6">
-          <p className="text-white text-sm lg:max-w-1/5">
+        <div className="flex lg:items-center justify-between items-end lg:gap-8 pb-14 border-b border-white/10 lg:flex-nowrap flex-wrap gap-6">
+          <p className="text-white text-sm lg:max-w-5/5">
             Stay connected with Manembah
             <br />
             Get the latest updates, special offers, and exclusive villa promotions.
@@ -38,7 +38,7 @@ const Footer = () => {
         <div className="py-16 border-b border-white/10">
           <div className="grid grid-cols-12 sm:gap-10 gap-y-6">
             <div className="md:col-span-7 col-span-12">
-              <h2 className="text-white leading-[1.2] text-40 font-medium mb-6 lg:max-w-3/4">
+              <h2 className="text-white leading-[1.2] text-40 font-medium mb-10 lg:max-w-3/4">
                 Plan your perfect villa
                 <br />
                 stay with us.
@@ -47,25 +47,15 @@ const Footer = () => {
                 Book Your Stay
               </Link>
             </div>
-            <div className="md:col-span-3 sm:col-span-6 col-span-12">
-              <div className="flex flex-col gap-4 w-fit">
-                {FooterLinks.slice(0, 4).map((item, index) => (
-                  <div key={index}>
-                    <Link href={item.href} className="text-white/40 text-xm hover:text-white">
-                      {item.label}
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="md:col-span-2 sm:col-span-6 col-span-12">
-              <div className="flex flex-col gap-4 w-fit">
-                {FooterLinks.slice(4, 8).map((item, index) => (
-                  <div key={index}>
-                    <Link href={item.href} className="text-white/40 text-xm hover:text-white">
-                      {item.label}
-                    </Link>
-                  </div>
+            <div className="md:col-span-4 sm:col-span-6 col-span-12 ">
+              <div className="grid grid-cols-2 gap-x-8 gap-y-4 ">
+                {FooterLinks.slice(0, 6).map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-white/40 text-xm hover:text-primary transition-colors duration-200">
+                    {item.label}
+                  </Link>
                 ))}
               </div>
             </div>
