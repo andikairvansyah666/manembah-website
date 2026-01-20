@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Hero: React.FC = () => {
   return (
     <section className='!py-0'>
-      <div className='bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10 overflow-hidden relative'>
+      <div className='bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#CEAF6F] to-white/10 dark:to-black/10 overflow-hidden relative'>
         <div className='container max-w-8xl mx-auto px-5 2xl:px-0 pt-32 md:pt-60 md:pb-68'>
           <div className='relative text-white dark:text-white text-center md:text-start z-10'>
             <p className='text-inherit text-xm font-medium'>Private Villa in Blitar</p>

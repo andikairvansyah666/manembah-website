@@ -8,8 +8,8 @@ export const ColorConfiguration = () => {
                 <div className="py-4 px-5 rounded-md bg-black mt-8">
                     <p className="text-sm text-gray-400 flex flex-col gap-2">
                         <span>--color-primary: #B0914F;</span>
-                        <span>--color-skyblue: #79adff;</span>
-                        <span>--color-lightskyblue: #9cc2dd;</span>
+                        <span>--color-skyblue: #B0914F;</span>
+                        <span>--color-lightskyblue: #B0914F;</span>
                         <span>--color-dark: #172023;</span>
                     </p>
                 </div>
