@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { Bricolage_Grotesque } from 'next/font/google'
 import './globals.css'
-import Header from '@/components/Layout/Header'
-import Footer from '@/components/Layout/Footer'
 import { ThemeProvider } from 'next-themes'
 import NextTopLoader from 'nextjs-toploader';
 import SessionProviderComp from '@/components/nextauth/SessionProvider'
@@ -28,9 +26,7 @@ export default function RootLayout({
             attribute='class'
             enableSystem={true}
             defaultTheme='light'>
-            <Header />
             {children}
-            <Footer />
           </ThemeProvider>
         </SessionProviderComp>
       </body>

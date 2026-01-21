@@ -6,11 +6,16 @@ import SocialSignIn from "../SocialSignIn";
 import { Toaster } from 'react-hot-toast';
 import AuthDialogContext from "@/app/context/AuthDialogContext";
 import Logo from "@/components/Layout/Header/BrandLogo/Logo";
+import { Icon } from "@iconify/react"
+
+
 
 const Signin = ({ signInOpen }: { signInOpen?: (value: boolean) => void }) => {
+  const [email, setEmail] = useState("");
   const [username, setUsername] = useState("admin");
   const [password, setPassword] = useState("admin123");
   const authDialog = useContext(AuthDialogContext);
+  const [showPassword, setShowPassword] = useState(false);
 
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -41,40 +46,74 @@ const Signin = ({ signInOpen }: { signInOpen?: (value: boolean) => void }) => {
 
   return (
     <>
-      <div className="mb-10 text-center flex justify-center">
-        <Logo />
-      </div>
+    <div className="flex items-center justify-center gap-4 mb-10">
+      <Logo />
+      <h3 className="text-4xl sm:text-[52px] font-medium tracking-tighter text-black dark:text-white leading-10 sm:leading-[56px]">
+        Manembah
+      </h3>
+    </div>
+
 
       <SocialSignIn />
 
       <span className="z-1 relative my-8 block text-center">
         <span className="-z-1 absolute left-0 top-1/2 block h-px w-full bg-black/10 dark:bg-white/20"></span>
-        <span className="text-body-secondary relative z-10 inline-block bg-white px-3 text-base dark:bg-black">
+        <span className="text-body-secondary relative z-10 inline-block bg-white px-3 text-base dark:bg-black"
+        >
           OR
         </span>
         <Toaster />
       </span>
 
       <form onSubmit={handleSubmit}>
-        <div className="mb-[22px]">
+        <div className="mb-4 sm:mb-[22px]">
+          <label
+            htmlFor="email"
+            className="mb-1 sm:mb-2 block text-sm sm:text-base font-medium text-dark dark:text-white"
+            >
+            Email
+          </label>
           <input
-            type="text"
-            placeholder="Username"
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Email"
             required
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            className="w-full rounded-2xl border placeholder:text-gray-400 border-black/10 dark:border-white/20 border-solid bg-transparent px-5 py-3 text-base text-dark outline-none transition  focus:border-primary focus-visible:shadow-none dark:border-border_color dark:text-white dark:focus:border-primary"
-          />
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            autoComplete="email"
+            className="w-full rounded-xl sm:rounded-2xl border border-black/10 dark:border-white/20 bg-transparent px-4 sm:px-5 py-3 text-sm sm:text-base text-dark dark:text-white placeholder:text-gray-400 outline-none transition focus:border-primary focus-visible:shadow-none dark:focus:border-primary"/>
         </div>
-        <div className="mb-[22px]">
-          <input
-            type="password"
-            required
-            value={password}
-            placeholder="Password"
-            onChange={(e) => setPassword(e.target.value)}
-            className="w-full rounded-2xl border border-black/10 dark:border-white/20 border-solid bg-transparent px-5 py-3 text-base text-dark outline-none transition  focus:border-primary focus-visible:shadow-none dark:border-border_color dark:text-white dark:focus:border-primary"
-          />
+        <div className="mb-6 sm:mb-[22px]">
+          <label
+            htmlFor="password"
+            className="mb-1 sm:mb-2 block text-sm sm:text-base font-medium text-dark dark:text-white"
+            >
+            Password
+          </label>
+          <div className="relative">
+            <input
+              id="password"
+              type={showPassword ? "text" : "password"}
+              name="password"
+              placeholder="Password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="current-password"
+              className="w-full rounded-xl sm:rounded-2xl border border-black/10 dark:border-white/20 bg-transparent px-4 sm:px-5 py-3 pr-12 text-sm sm:text-base text-dark dark:text-white placeholder:text-gray-400 outline-none transition focus:border-primary focus-visible:shadow-none dark:focus:border-primary"/>
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-primary transition"
+              aria-label={showPassword ? "Hide password" : "Show password"}
+            >
+              <Icon
+                icon={showPassword ? "mdi:eye-off" : "mdi:eye"}
+                width={20}
+              />
+            </button>
+          </div>
         </div>
         <div className="mb-9">
           <button
@@ -97,7 +136,7 @@ const Signin = ({ signInOpen }: { signInOpen?: (value: boolean) => void }) => {
       </div>
       <p className="text-body-secondary text-base text-center">
         Not a member yet?{" "}
-        <Link href="/" className="text-primary hover:underline">
+        <Link href="/signup" className="text-primary hover:underline">
           Sign Up
         </Link>
       </p>
