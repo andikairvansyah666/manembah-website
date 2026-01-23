@@ -179,7 +179,7 @@ const FeaturedProperty: React.FC = () => {
                 <h6 className="">Private Pool</h6>
               </div>
             </div>
-            <div className="flex gap-10">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-10">
               <Link href="/contactus" className="py-4 px-8 bg-primary hover:bg-dark duration-300 rounded-full text-white">
                 View Details
               </Link>

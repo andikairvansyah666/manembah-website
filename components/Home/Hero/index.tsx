@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
         <div className='container max-w-8xl mx-auto px-5 2xl:px-0 pt-32 md:pt-60 md:pb-68'>
           <div className='relative text-white dark:text-white text-center md:text-start z-10'>
             <p className='text-inherit text-xm font-medium'>Private Villa in Blitar</p>
-            <h1 className='text-inherit text-6xl sm:text-9xl font-semibold -tracking-wider md:max-w-full mt-4 mb-6'>
+            <h1 className='text-inherit text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-semibold -tracking-wider md:max-w-full mt-4 mb-6'>
               YOUR VILLA EXPERIENCE STARTS HERE
             </h1>
             <div className='flex flex-col xs:flex-row justify-center md:justify-start gap-4'>
@@ -31,8 +31,8 @@ const Hero: React.FC = () => {
             />
           </div>
         </div>
-        <div className='md:absolute bottom-0 md:-right-68 xl:right-0 bg-white dark:bg-black py-12 px-8 mobile:px-16 md:pl-16 md:pr-[295px] rounded-2xl md:rounded-none md:rounded-tl-2xl mt-24'>
-          <div className='grid grid-cols-2 sm:grid-cols-4 md:flex gap-16 md:gap-24 sm:text-center dark:text-white text-black'>
+        <div className='md:absolute bottom-0 md:-right-68 xl:right-0 bg-white dark:bg-black py-8 sm:py-12 px-4 sm:px-8 mobile:px-16 md:pl-10 md:pr-16 lg:pr-[200px] xl:pr-[295px] rounded-2xl md:rounded-none md:rounded-tl-2xl mt-24'>
+          <div className='grid grid-cols-2 sm:grid-cols-4 md:flex gap-6 sm:gap-12 md:gap-12 lg:gap-14 xl:gap-24 sm:text-center dark:text-white text-black'>
             <div className='flex flex-col sm:items-center gap-3'>
               <Image
                 src={'/images/hero/sofa.svg'}

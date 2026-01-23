@@ -100,7 +100,7 @@ const Testimonial = () => {
                         ))}
                     </CarouselContent>
                 </Carousel>
-                <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 flex gap-2.5 p-2.5 bg-white/20 rounded-full">
+                <div className="absolute bottom-8 sm:bottom-16 md:bottom-24 left-1/2 transform -translate-x-1/2 flex gap-2.5 p-2.5 bg-white/20 rounded-full">
                     {Array.from({ length: count }).map((_, index) => (
                         <button
                             key={index}

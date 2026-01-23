@@ -12,8 +12,7 @@ import { Icon } from "@iconify/react"
 
 const Signin = ({ signInOpen }: { signInOpen?: (value: boolean) => void }) => {
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("admin");
-  const [password, setPassword] = useState("admin123");
+  const [password, setPassword] = useState("");
   const authDialog = useContext(AuthDialogContext);
   const [showPassword, setShowPassword] = useState(false);
 
@@ -22,7 +21,7 @@ const Signin = ({ signInOpen }: { signInOpen?: (value: boolean) => void }) => {
     e.preventDefault();
     const result = await signIn("credentials", {
       redirect: false,
-      username,
+      email,
       password,
     });
     if (result?.error) {
@@ -71,13 +70,13 @@ const Signin = ({ signInOpen }: { signInOpen?: (value: boolean) => void }) => {
             htmlFor="email"
             className="mb-1 sm:mb-2 block text-sm sm:text-base font-medium text-dark dark:text-white"
             >
-            Email
+            Email Address
           </label>
           <input
             id="email"
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Enter your email address"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -96,7 +95,7 @@ const Signin = ({ signInOpen }: { signInOpen?: (value: boolean) => void }) => {
               id="password"
               type={showPassword ? "text" : "password"}
               name="password"
-              placeholder="Password"
+              placeholder="Enter your password"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}

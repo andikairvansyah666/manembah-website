@@ -30,7 +30,7 @@ const FAQ: React.FC = () => {
                         <h2 className='lg:text-52 text-40 leading-[1.2] font-medium text-dark dark:text-white'>
                             Things You Need to Know
                         </h2>
-                        <p className='text-dark/50 dark:text-white/50 pr-20'>
+                        <p className='text-dark/50 dark:text-white/50 pr-0 sm:pr-10 lg:pr-20'>
                             Find answers to the most common questions about our villa, facilities, and booking process.
                         </p>
                         <div className="my-8">

@@ -82,7 +82,7 @@ const SignUp = ({ signUpOpen }: { signUpOpen?: (value: boolean) => void }) => {
             id="name"
             type="text"
             name="name"
-            placeholder="Full Name"
+            placeholder="Enter your Name"
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -113,7 +113,7 @@ const SignUp = ({ signUpOpen }: { signUpOpen?: (value: boolean) => void }) => {
             id="email"
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Enter your email address"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -147,7 +147,7 @@ const SignUp = ({ signUpOpen }: { signUpOpen?: (value: boolean) => void }) => {
               id="password"
               type={showPassword ? "text" : "password"}
               name="password"
-              placeholder="Password"
+              placeholder="Enter your password"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}

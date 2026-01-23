@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 const SignUpPage = () => {
     return (
         <>
-            <section className="pt-44!">
-                <div className="p-16 container mx-auto max-w-540 py-5 rounded-2xl shadow-auth dark:shadow-dark-auth">
+            <section className="min-h-screen flex items-start justify-center pt-44 px-4">
+                <div className="w-full max-w-[540px] p-4 sm:p-8 md:p-16 rounded-2xl shadow-auth dark:shadow-dark-auth">
                     <SignUp />
                 </div>
             </section>
