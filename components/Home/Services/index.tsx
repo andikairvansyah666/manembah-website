@@ -28,7 +28,7 @@ const Categories = () => {
           <div className="lg:col-span-6 col-span-12">
             <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2.5">
               <Icon icon="ph:house-simple-fill" className="text-2xl text-primary " />
-              Categories
+              About Us
             </p>
             <h2 className="lg:text-52 text-40 mt-4 mb-2 lg:max-w-full font-medium leading-[1.2] text-dark dark:text-white">
               Experience a Relaxing Stay
@@ -55,8 +55,8 @@ const Categories = () => {
               </Link>
               <Link href="/residential-homes" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 sm:pl-6 sm:pb-6 lg:pl-10 lg:pb-10 group-hover:top-0 duration-500">
                 <div className="flex justify-end mt-6 mr-6">
-                  <div className="bg-white text-dark rounded-full w-fit p-4">
-                    <Icon icon="ph:arrow-right" width={24} height={24} />
+                  <div className="bg-primary text-dark rounded-full w-fit p-4" >
+                    <Icon icon="ph:arrow-right" width={24} height={24} className="text-white"  />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2.5">
@@ -84,8 +84,8 @@ const Categories = () => {
               </Link>
               <Link href="/residential-homes" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 sm:pl-6 sm:pb-6 lg:pl-10 lg:pb-10 group-hover:top-0 duration-500">
                 <div className="flex justify-end mt-6 mr-6">
-                  <div className="bg-white text-dark rounded-full w-fit p-4">
-                    <Icon icon="ph:arrow-right" width={24} height={24} />
+                  <div className="bg-primary text-dark rounded-full w-fit p-4" >
+                    <Icon icon="ph:arrow-right" width={24} height={24} className="text-white" />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2.5">
@@ -113,8 +113,8 @@ const Categories = () => {
               </Link>
               <Link href="/residential-homes" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 sm:pl-6 sm:pb-6 lg:pl-10 lg:pb-10 group-hover:top-0 duration-500">
                 <div className="flex justify-end mt-6 mr-6">
-                  <div className="bg-white text-dark rounded-full w-fit p-4">
-                    <Icon icon="ph:arrow-right" width={24} height={24} />
+                  <div className="bg-primary text-dark rounded-full w-fit p-4">
+                    <Icon icon="ph:arrow-right" width={24} height={24} className="text-white" />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2.5">
@@ -142,8 +142,8 @@ const Categories = () => {
               </Link>
               <Link href="/residential-homes" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 sm:pl-6 sm:pb-6 lg:pl-10 lg:pb-10 group-hover:top-0 duration-500">
                 <div className="flex justify-end mt-6 mr-6">
-                  <div className="bg-white text-dark rounded-full w-fit p-4">
-                    <Icon icon="ph:arrow-right" width={24} height={24} />
+                  <div className="bg-primary text-dark rounded-full w-fit p-4">
+                    <Icon icon="ph:arrow-right" width={24} height={24} className="text-white" />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2.5">

@@ -4,6 +4,7 @@ import Services from '@/components/Home/Services'
 import Testimonial from '@/components/Home/Testimonial'
 import GetInTouch from '@/components/Home/GetInTouch'
 import FAQ from '@/components/Home/FAQs'
+import Properties from '@/components/Home/Properties'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Services />
       <FeaturedProperty />
+      <Properties />
       <Testimonial />
       <GetInTouch />
       <FAQ />

@@ -2,7 +2,7 @@ import { FeaturedProperty } from '@/types/featuredProperty'
 
 export const featuredProprty: FeaturedProperty[] = [
   {
-    scr: '/images/featuredproperty/image-1.jpg',
+    scr: '/images/featuredproperty/villa-1.jpg',
     alt: 'property6',
   },
   {

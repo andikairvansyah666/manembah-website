@@ -74,7 +74,7 @@ const FeaturedProperty: React.FC = () => {
             <div>
               <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2">
                 <Icon icon="ph:house-simple-fill" className="text-2xl text-primary " />
-                Featured property
+                Villa
               </p>
               <h2 className="lg:text-52 text-40 font-medium text-dark dark:text-white">
                 Kelarisan Villa
@@ -185,7 +185,7 @@ const FeaturedProperty: React.FC = () => {
               </Link>
               <div>
                 <h4 className="text-3xl text-dark dark:text-white font-medium">
-                  Rp. 650.000,00 /Day
+                  650K /Day
                 </h4>
                 <p className="text-base text-dark/50 dark:text-white/50">
                   Discounted price

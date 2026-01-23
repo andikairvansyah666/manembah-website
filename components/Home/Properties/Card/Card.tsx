@@ -24,12 +24,12 @@ const PropertyCard: React.FC<{ item: PropertyHomes }> = ({ item }) => {
               />
             )}
           </Link>
-          <div className='absolute top-6 right-6 p-4 bg-white rounded-full hidden group-hover:block'>
+          <div className="absolute top-6 right-6 p-4 bg-primary rounded-full hidden group-hover:block transition-all duration-1000 ease-out scale-90 group-hover:scale-100">
             <Icon
-              icon={'solar:arrow-right-linear'}
+              icon="solar:arrow-right-linear"
               width={24}
               height={24}
-              className='text-black'
+              className="text-white"
             />
           </div>
         </div>
