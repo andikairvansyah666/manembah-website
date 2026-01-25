@@ -175,18 +175,22 @@ export default function Details() {
                                 </div>
                             </div>
                         </div>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d938779.7831767448!2d71.05098621661072!3d23.20271516446136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e82dd003ff749%3A0x359e803f537cea25!2sGANESH%20GLORY%2C%20Gota%2C%20Ahmedabad%2C%20Gujarat%20382481!5e0!3m2!1sen!2sin!4v1715676641521!5m2!1sen!2sin"
-                            width="1114" height="400" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-2xl w-full">
-                        </iframe>
+                        <div className="w-full aspect-[6/3] rounded-2xl overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.1193898715846!2d112.18352637442726!3d-8.089305491939179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78ed946a5cd16d%3A0xf6860adb841a8327!2sMANEMBAH%20BLITAR%20FAMILY%20HOMESTAY!5e0!3m2!1sid!2sid!4v1769351506024!5m2!1sid!2sid"
+                                className="w-full h-full border-0"
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            />
+                        </div>
                     </div>
                     <div className="lg:col-span-4 col-span-12">
-                        <div className="bg-primary/10 p-8 rounded-2xl relative z-10 overflow-hidden">
-                            <h4 className='text-dark text-3xl font-medium dark:text-white'>
+                        <div className="bg-dark p-8 rounded-2xl relative z-10 overflow-hidden">
+                            <h4 className='text-white text-3xl font-medium dark:text-white'>
                                 {item?.rate}
                             </h4>
-                            <p className='text-sm text-dark/50 dark:text-white'>Discounted Price</p>
-                            <Link href="#" className='py-4 px-8 bg-primary text-white rounded-full w-full block text-center hover:bg-dark duration-300 text-base mt-8 hover:cursor-pointer'>
+                            <p className='text-sm text-white/50 dark:text-white'>Discounted Price</p>
+                            <Link href="#" className='py-4 px-8 bg-primary text-white rounded-full w-full block text-center hover:bg-white duration-300 text-base mt-8 hover:cursor-pointer hover:text-primary'>
                                 Get in touch
                             </Link>
                             <div className="absolute right-0 top-4 -z-[1]">
