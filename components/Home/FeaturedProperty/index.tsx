@@ -93,90 +93,90 @@ const FeaturedProperty: React.FC = () => {
               kitchen, a smart TV, a private swimming pool, and a convenient parking area,
               ensuring a pleasant and enjoyable experience.
             </p>
-            <div className="grid grid-cols-2 gap-10">
-              <div className="flex items-center gap-4">
-                <div className="bg-dark/5 dark:bg-white/5 p-2.5 rounded-[6px]">
+            <div className="flex flex-col gap-8">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-[6px]">
                   <Image
-                    src={'/images/hero/sofa.svg'}
-                    alt='sofa'
+                    src={'/images/hero/pool.svg'}
+                    alt="pool"
                     width={24}
                     height={24}
-                    className='block dark:hidden'
-                    unoptimized={true}
+                    className="block dark:hidden"
+                    unoptimized
                   />
                   <Image
-                    src={'/images/hero/dark-sofa.svg'}
-                    alt='sofa'
+                    src={'/images/hero/dark-pool.svg'}
+                    alt="pool"
                     width={24}
                     height={24}
-                    className='hidden dark:block'
-                    unoptimized={true}
-                  />
-                </div>
-                <h6 className="">3 Bedrooms</h6>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="bg-dark/5 dark:bg-white/5 p-2.5 rounded-[6px]">
-                  <Image
-                    src={'/images/hero/tube.svg'}
-                    alt='tube'
-                    width={24}
-                    height={24}
-                    className='block dark:hidden'
-                    unoptimized={true}
-                  />
-                  <Image
-                    src={'/images/hero/dark-tube.svg'}
-                    alt='tube'
-                    width={24}
-                    height={24}
-                    className='hidden dark:block'
-                    unoptimized={true}
+                    className="hidden dark:block"
+                    unoptimized
                   />
                 </div>
-                <h6 className="">2 Bathrooms</h6>
+                <div>
+                  <h6 className="font-medium text-base mb-1">
+                    Private Pool
+                  </h6>
+                  <p className="text-sm text-black/60 dark:text-white/60">
+                    Enjoy a private pool for a relaxing and comfortable stay.
+                  </p>
+                </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="bg-dark/5 dark:bg-white/5 p-2.5 rounded-[6px]">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-[6px]">
+                  <Image
+                    src={'/images/hero/remote.svg'}
+                    alt="remote"
+                    width={24}
+                    height={24}
+                    className="block dark:hidden"
+                    unoptimized
+                  />
+                  <Image
+                    src={'/images/hero/dark-remote.svg'}
+                    alt="remote"
+                    width={24}
+                    height={24}
+                    className="hidden dark:block"
+                    unoptimized
+                  />
+                </div>
+                <div>
+                  <h6 className="font-medium text-base mb-1">
+                    Smart TV
+                  </h6>
+                  <p className="text-sm text-black/60 dark:text-white/60">
+                    Watch your favorite entertainment with a smart TV.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-[6px]">
                   <Image
                     src={'/images/hero/parking.svg'}
-                    alt='parking'
+                    alt="parking"
                     width={24}
                     height={24}
-                    className='block dark:hidden'
-                    unoptimized={true}
+                    className="block dark:hidden"
+                    unoptimized
                   />
                   <Image
                     src={'/images/hero/dark-parking.svg'}
-                    alt='parking'
+                    alt="parking"
                     width={24}
                     height={24}
-                    className='hidden dark:block'
-                    unoptimized={true}
+                    className="hidden dark:block"
+                    unoptimized
                   />
                 </div>
-                <h6 className="">Parking Space</h6>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="bg-dark/5 dark:bg-white/5 p-2.5 rounded-[6px]">
-                  <Image
-                    src={'/images/hero/pool.svg'}
-                    alt='pool'
-                    width={24}
-                    height={24}
-                    className='block dark:hidden'
-                    unoptimized={true}
-                  />
-                  <Image
-                    src={'/images/hero/dark-bar.svg'}
-                    alt='bar'
-                    width={24}
-                    height={24}
-                    className='hidden dark:block'
-                    unoptimized={true}
-                  />
+                <div>
+                  <h6 className="font-medium text-base mb-1">
+                    Parking Area
+                  </h6>
+                  <p className="text-sm text-black/60 dark:text-white/60">
+                    Safe and convenient parking space for guests.
+                  </p>
                 </div>
-                <h6 className="">Private Pool</h6>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-10">

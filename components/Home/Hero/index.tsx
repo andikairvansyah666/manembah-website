@@ -38,8 +38,8 @@ export default function HeroSection() {
       {/* =====================================================
         CONTENT
       ===================================================== */}
-      <div className="relative z-20 container max-w-8xl mx-auto px-5 2xl:px-0 pt-32 md:pt-60 pb-24">
-        <div className="text-white text-center md:text-start max-w-4xl">
+      <div className="relative z-20 container max-w-8xl mx-auto px-5 2xl:px-0 pt-32 md:pt-28 pb-24">
+        <div className="text-white text-center md:text-start max-w-6xl">
           <p className="text-sm sm:text-base font-medium">
             Private Villa in Blitar
           </p>

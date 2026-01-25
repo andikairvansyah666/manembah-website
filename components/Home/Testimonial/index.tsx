@@ -36,10 +36,10 @@ const Testimonial = () => {
         <section className="bg-dark relative overflow-hidden" id="testimonial">
             <div className="absolute right-0">
                 <Image
-                    src="/images/testimonial/Vector.png"
+                    src="/images/testimonial/Vector.svg"
                     alt="victor"
-                    width={700}
-                    height={1039}
+                    width={800}
+                    height={1100}
                     unoptimized={true}
                 />
             </div>
