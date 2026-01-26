@@ -9,9 +9,10 @@ export const propertyHomes: PropertyHomes[] = [
     beds: 2,
     baths: 2,
     area: 120,
+    
     images: [
       {
-        src: "/images/properties/property1/guesthouse1.jpg",
+        src: "/images/properties/property1/mainguesthouse1.jpg",
       },
       {
         src: "/images/properties/property1/image-2.jpg"
@@ -21,6 +22,9 @@ export const propertyHomes: PropertyHomes[] = [
       },
       {
         src: "/images/properties/property1/image-4.jpg"
+      },
+      {
+        src: "/images/properties/property1/image-5.jpg"
       },
     ]
   },
@@ -34,7 +38,7 @@ export const propertyHomes: PropertyHomes[] = [
     area: 150,
     images: [
       {
-        src: "/images/properties/property2/guesthouse2.jpg",
+        src: "/images/properties/property2/mainguesthouse2.jpg",
       },
       {
         src: "/images/properties/property2/image-2.jpg"
@@ -44,6 +48,9 @@ export const propertyHomes: PropertyHomes[] = [
       },
       {
         src: "/images/properties/property2/image-4.jpg"
+      },
+      {
+        src: "/images/properties/property2/image-5.jpg"
       },
     ]
   },
@@ -57,7 +64,7 @@ export const propertyHomes: PropertyHomes[] = [
     area: 180,
     images: [
       {
-        src: "/images/properties/property3/guesthouse3.jpg",
+        src: "/images/properties/property3/mainguesthouse3.jpg",
       },
       {
         src: "/images/properties/property3/image-2.jpg"
@@ -67,6 +74,9 @@ export const propertyHomes: PropertyHomes[] = [
       },
       {
         src: "/images/properties/property3/image-4.jpg"
+      },
+      {
+        src: "/images/properties/property3/image-5.jpg"
       },
     ]
   },

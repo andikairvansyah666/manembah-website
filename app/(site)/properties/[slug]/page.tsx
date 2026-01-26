@@ -16,6 +16,10 @@ export default function Details() {
             <div className="container mx-auto max-w-8xl px-5 2xl:px-0">
                 <div className="grid grid-cols-12 items-end gap-6">
                     <div className="lg:col-span-8 col-span-12">
+                        <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2">
+                            <Icon icon="ph:house-simple-fill" className="text-2xl text-primary " />
+                            Guest House
+                        </p>
                         <h1 className='lg:text-52 text-40 font-semibold text-dark dark:text-white'>{item?.name}</h1>
                         <div className="flex gap-2.5">
                             <Icon icon="ph:map-pin" width={24} height={24} className="text-dark/50 dark:text-white/50" />
@@ -51,10 +55,10 @@ export default function Details() {
                 </div>
                 <div className="grid grid-cols-12 mt-8 gap-8">
                     <div className="lg:col-span-8 col-span-12 row-span-2">
-                        {item?.images && item?.images[0] && (
+                        {item?.images && item?.images[1] && (
                             <div className="">
                                 <Image
-                                    src={item.images[0]?.src}
+                                    src={item.images[1]?.src}
                                     alt="Main Property Image"
                                     width={400}
                                     height={500}
@@ -65,18 +69,18 @@ export default function Details() {
                         )}
                     </div>
                     <div className="lg:col-span-4 lg:block hidden">
-                        {item?.images && item?.images[1] && (
-                            <Image src={item.images[1]?.src} alt="Property Image 2" width={400} height={500} className="rounded-2xl w-full h-full" unoptimized={true} />
-                        )}
-                    </div>
-                    <div className="lg:col-span-2 col-span-6">
                         {item?.images && item?.images[2] && (
-                            <Image src={item.images[2]?.src} alt="Property Image 3" width={400} height={500} className="rounded-2xl w-full h-full" unoptimized={true} />
+                            <Image src={item.images[2]?.src} alt="Property Image 2" width={400} height={500} className="rounded-2xl w-full h-full" unoptimized={true} />
                         )}
                     </div>
                     <div className="lg:col-span-2 col-span-6">
                         {item?.images && item?.images[3] && (
-                            <Image src={item.images[3]?.src} alt="Property Image 4" width={400} height={500} className="rounded-2xl w-full h-full" unoptimized={true} />
+                            <Image src={item.images[3]?.src} alt="Property Image 3" width={400} height={500} className="rounded-2xl w-full h-full" unoptimized={true} />
+                        )}
+                    </div>
+                    <div className="lg:col-span-2 col-span-6">
+                        {item?.images && item?.images[4] && (
+                            <Image src={item.images[4]?.src} alt="Property Image 4" width={400} height={500} className="rounded-2xl w-full h-full" unoptimized={true} />
                         )}
                     </div>
                 </div>
@@ -90,9 +94,9 @@ export default function Details() {
                                     <Image src="/images/SVGs/property-details-white.svg" width={400} height={500} alt="" className='w-8 h-8 dark:block hidden' unoptimized={true} />
                                 </div>
                                 <div>
-                                    <h3 className='text-dark dark:text-white text-xm'>Property details</h3>
+                                    <h3 className='text-dark dark:text-white text-xm'>Modern Bathroom</h3>
                                     <p className='text-base text-dark/50 dark:text-white/50'>
-                                        One of the few homes in the area with a private pool.
+                                        A clean, modern bathroom with complete amenities for your comfort.
                                     </p>
                                 </div>
                             </div>
@@ -102,9 +106,9 @@ export default function Details() {
                                     <Image src="/images/SVGs/smart-home-access-white.svg" width={400} height={500} alt="" className='w-8 h-8 dark:block hidden' unoptimized={true} />
                                 </div>
                                 <div>
-                                    <h3 className='text-dark dark:text-white text-xm'>Smart home access</h3>
+                                    <h3 className='text-dark dark:text-white text-xm'>Smart TV</h3>
                                     <p className='text-base text-dark/50 dark:text-white/50'>
-                                        Easily check yourself in with a modern keypad system.
+                                        Watch your favorite entertainment with a smart TV.
                                     </p>
                                 </div>
                             </div>
@@ -114,64 +118,143 @@ export default function Details() {
                                     <Image src="/images/SVGs/energyefficient-white.svg" width={400} height={500} alt="" className='w-8 h-8 dark:block hidden' unoptimized={true} />
                                 </div>
                                 <div>
-                                    <h3 className='text-dark dark:text-white text-xm'>Energy efficient</h3>
+                                    <h3 className='text-dark dark:text-white text-xm'>Parking Area</h3>
                                     <p className='text-base text-dark/50 dark:text-white/50'>
-                                        Built in 2025 with sustainable and smart-home features.
+                                        Safe and convenient parking space for guests.
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div className="flex flex-col gap-5">
                             <p className='text-dark dark:text-white text-xm '>
-                                Nestled in the heart of miami, the modern luxe villa at 20 s aurora ave offers a perfect blend of contemporary
-                                elegance and smart-home innovation. priced at $570000, this 560 ft² residence features 4 spacious bedrooms,
-                                3 luxurious bathrooms, and expansive living areas designed for comfort and style. built in 2025, the home
-                                boasts energy-efficient systems, abundant natural light, and state-of-the-art security features. outdoor
-                                spaces include two stylish bar areas, perfect for entertaining 8+ guests. enjoy the ultimate in modern living
-                                with premium amenities and a prime location.
+                                Guest House Classic Unit offers a cozy and comfortable stay, ideal for travelers or small groups seeking a peaceful place to rest. 
+                                Designed with a simple and classic style, the unit provides a warm atmosphere that feels relaxing and welcoming.
                             </p>
                             <p className='text-dark dark:text-white text-xm '>
-                                Step inside to discover an open-concept layout that seamlessly connects the kitchen, dining, and living spaces.
-                                the gourmet kitchen is equipped with top-of-the-line appliances, sleek cabinetry, and a large island perfect
-                                for casual dining or meal prep. the sunlit living room offers floor-to-ceiling windows, creating a bright and
-                                airy atmosphere while providing stunning views of the outdoor space.
+                                The unit is equipped with essential facilities to support a pleasant stay, including a comfortable bedroom, smart TV, clean bathroom, 
+                                and a functional living area. Each facility is thoughtfully prepared to ensure guests enjoy comfort and convenience throughout their visit.
                             </p>
                             <p className='text-dark dark:text-white text-xm '>
-                                The primary suite serves as a private retreat with a spa-like ensuite bathroom and a spacious walk-in closet.
-                                each additional bedroom is thoughtfully designed with comfort and style in mind, offering ample space and modern
-                                finishes. the home’s three bathrooms feature high-end fixtures, custom vanities, and elegant tiling.
-                            </p>
-                            <p className='text-dark dark:text-white text-xm '>
-                                Outdoor living is equally impressive, with a beautifully landscaped backyard, multiple lounge areas,
-                                and two fully equipped bar spaces.
+                                Check-in starts at 13:00 and check-out is at 12:00. The calm environment and practical amenities make Guest House Classic Unit a great choice
+                                for a simple, comfortable, and worry-free stay.
                             </p>
                         </div>
                         <div className="py-8 mt-8 border-t border-dark/5 dark:border-white/15">
                             <h3 className='text-xl font-medium'>What this property offers</h3>
                             <div className="grid grid-cols-3 mt-5 gap-6">
                                 <div className="flex items-center gap-2.5">
-                                    <Icon icon="ph:aperture" width={24} height={24} className="text-dark dark:text-white" />
-                                    <p className='text-base dark:text-white text-dark'>Smart Home Integration</p>
+                                    <Image
+                                        src="/images/SVGs/point.svg"
+                                        alt="Point"
+                                        width={16}
+                                        height={16}
+                                        className="block dark:hidden"
+                                    />
+                                    <Image
+                                        src="/images/SVGs/point-dark.svg"
+                                        alt="Point"
+                                        width={16}
+                                        height={16}
+                                        className="hidden dark:block"
+                                    />
+                                    <p className="text-base text-dark dark:text-white">
+                                        2 floors
+                                    </p>
                                 </div>
                                 <div className="flex items-center gap-2.5">
-                                    <Icon icon="ph:chart-pie-slice" width={24} height={24} className="text-dark dark:text-white" />
-                                    <p className='text-base dark:text-white text-dark'>Spacious Living Areas</p>
+                                    <Image
+                                        src="/images/SVGs/point.svg"
+                                        alt="Point"
+                                        width={16}
+                                        height={16}
+                                        className="block dark:hidden"
+                                    />
+                                    <Image
+                                        src="/images/SVGs/point-dark.svg"
+                                        alt="Point"
+                                        width={16}
+                                        height={16}
+                                        className="hidden dark:block"
+                                    />
+                                    <p className="text-base text-dark dark:text-white">
+                                        Kitchen Set
+                                    </p>
                                 </div>
                                 <div className="flex items-center gap-2.5">
-                                    <Icon icon="ph:television-simple" width={24} height={24} className="text-dark dark:text-white" />
-                                    <p className='text-base dark:text-white text-dark'>Energy Efficiency</p>
+                                    <Image
+                                        src="/images/SVGs/point.svg"
+                                        alt="Point"
+                                        width={16}
+                                        height={16}
+                                        className="block dark:hidden"
+                                    />
+                                    <Image
+                                        src="/images/SVGs/point-dark.svg"
+                                        alt="Point"
+                                        width={16}
+                                        height={16}
+                                        className="hidden dark:block"
+                                    />
+                                    <p className="text-base text-dark dark:text-white">
+                                        Capacity 6 People
+                                    </p>
                                 </div>
                                 <div className="flex items-center gap-2.5">
-                                    <Icon icon="ph:sun" width={24} height={24} className="text-dark dark:text-white" />
-                                    <p className='text-base dark:text-white text-dark'>Natural Light</p>
+                                    <Image
+                                        src="/images/SVGs/point.svg"
+                                        alt="Point"
+                                        width={16}
+                                        height={16}
+                                        className="block dark:hidden"
+                                    />
+                                    <Image
+                                        src="/images/SVGs/point-dark.svg"
+                                        alt="Point"
+                                        width={16}
+                                        height={16}
+                                        className="hidden dark:block"
+                                    />
+                                    <p className="text-base text-dark dark:text-white">
+                                        Dinning Room
+                                    </p>
                                 </div>
                                 <div className="flex items-center gap-2.5">
-                                    <Icon icon="ph:video-camera" width={24} height={24} className="text-dark dark:text-white" />
-                                    <p className='text-base dark:text-white text-dark'>Security Systems</p>
+                                    <Image
+                                        src="/images/SVGs/point.svg"
+                                        alt="Point"
+                                        width={16}
+                                        height={16}
+                                        className="block dark:hidden"
+                                    />
+                                    <Image
+                                        src="/images/SVGs/point-dark.svg"
+                                        alt="Point"
+                                        width={16}
+                                        height={16}
+                                        className="hidden dark:block"
+                                    />
+                                    <p className="text-base text-dark dark:text-white">
+                                        Sitting Room
+                                    </p>
                                 </div>
                                 <div className="flex items-center gap-2.5">
-                                    <Icon icon="ph:cloud" width={24} height={24} className="text-dark dark:text-white" />
-                                    <p className='text-base dark:text-white text-dark'>Outdoor Spaces</p>
+                                    <Image
+                                        src="/images/SVGs/point.svg"
+                                        alt="Point"
+                                        width={16}
+                                        height={16}
+                                        className="block dark:hidden"
+                                    />
+                                    <Image
+                                        src="/images/SVGs/point-dark.svg"
+                                        alt="Point"
+                                        width={16}
+                                        height={16}
+                                        className="hidden dark:block"
+                                    />
+                                    <p className="text-base text-dark dark:text-white">
+                                        BBQ Grill
+                                    </p>
                                 </div>
                             </div>
                         </div>
