@@ -13,9 +13,9 @@ const Footer = () => {
             Get the latest updates, special offers, and exclusive villa promotions.
           </p>
           <div className="flex lg:flex-row flex-col items-center lg:gap-10 gap-3">
-            <div className="flex gap-2 lg:order-1 order-2">
-              <input type="email" placeholder="Enter Your Email" className="rounded-full py-4 px-6 bg-white/10 placeholder:text-white text-white focus-visible:outline-0" />
-              <button className="text-dark bg-white py-4 px-8 font-semibold rounded-full hover:bg-primary hover:text-white duration-300 hover:cursor-pointer">
+            <div className="flex sm:flex-row flex-col gap-2 lg:order-1 order-2 w-full sm:w-auto">
+              <input type="email" placeholder="Enter Your Email" className="rounded-full py-4 px-6 bg-white/10 placeholder:text-white text-white focus-visible:outline-0 w-full sm:w-auto" />
+              <button className="text-dark bg-white py-4 px-8 font-semibold rounded-full hover:bg-primary hover:text-white duration-300 hover:cursor-pointer w-full sm:w-auto">
                 Subscribe
               </button>
             </div>
@@ -65,7 +65,7 @@ const Footer = () => {
           <p className="text-white/40 text-sm ">
             © 2026 Manembah Villa and HomeStay | All Rights Reserved.
           </p>
-          <div className="flex gap-8 items-center">
+          <div className="flex gap-4 sm:gap-8 items-center">
             <Link href="#" className="text-white/40 hover:text-primary text-sm">
               Terms of service
             </Link>

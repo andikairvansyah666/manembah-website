@@ -1,12 +1,13 @@
 import { Icon } from '@iconify/react'
 import Image from 'next/image'
 import Link from 'next/link'
+import TestimonialForm from '@/components/Testimonial/TestimonialForm'
 import { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "Contact Us | Manembah",
+    title: "Testimonial | Manembah",
 };
 
-export default function ContactUs() {
+export default function Testimonial() {
   return (
     <div className='container max-w-8xl mx-auto px-5 2xl:px-0 pt-32 md:pt-44 pb-14 md:pb-28'>
       <div className='mb-16'>
@@ -20,16 +21,15 @@ export default function ContactUs() {
             />
           </span>
           <p className='text-base font-semibold text-badge dark:text-white/90'>
-            Contact us
+            Testimoni
           </p>
         </div>
         <div className='text-center'>
           <h3 className='text-4xl sm:text-52 font-medium tracking-tighter text-black dark:text-white mb-3 leading-10 sm:leading-14'>
-            Have questions? ready to help!
+            Share Your Stay Experience
           </h3>
           <p className='text-xm font-normal tracking-tight text-black/50 dark:text-white/50 leading-6'>
-            Looking for your dream home or ready to sell? Our expert team offers
-            personalized guidance and market expertise tailored to you.
+            Tell us about your experience and help other guests discover the comfort and service you enjoyed.
           </p>
         </div>
       </div>
@@ -38,7 +38,7 @@ export default function ContactUs() {
         <div className='flex flex-col lg:flex-row lg:items-center gap-12'>
           <div className='relative w-fit'>
             <Image
-              src={'/images/contactUs/contactUs.jpg'}
+              src={'/images/contactUs/contactUs.png'}
               alt='wall'
               width={497}
               height={535}
@@ -59,7 +59,7 @@ export default function ContactUs() {
                 <div className='flex items-center gap-4 group w-fit'>
                   <Icon icon={'ph:phone'} width={32} height={32} />
                   <p className='text-sm xs:text-base mobile:text-xm font-normal group-hover:text-primary'>
-                    +1 0239 0310 1122
+                    +62 821 - 3145 - 9670
                   </p>
                 </div>
               </Link>
@@ -67,63 +67,26 @@ export default function ContactUs() {
                 <div className='flex items-center gap-4 group w-fit'>
                   <Icon icon={'ph:envelope-simple'} width={32} height={32} />
                   <p className='text-sm xs:text-base mobile:text-xm font-normal group-hover:text-primary'>
-                    support@gleamer.com
+                    contact@manembah.com
                   </p>
                 </div>
               </Link>
               <div className='flex items-center gap-4'>
                 <Icon icon={'ph:map-pin'} width={32} height={32} />
                 <p className='text-sm xs:text-base mobile:text-xm font-normal'>
-                  Blane Street, Manchester
+                  Graha Permata Regency Blok Melati 4, <br /> Jl. WR Supratman, Kota Blitar
+                </p>
+              </div>
+              <div className='flex items-center gap-4'>
+                <Icon icon={'ph:map-pin'} width={32} height={32} />
+                <p className='text-sm xs:text-base mobile:text-xm font-normal'>
+                  Jl. Brigjen Katamso no. 6, Gedog, Kota Blitar
                 </p>
               </div>
             </div>
           </div>
           <div className='flex-1/2'>
-            <form>
-              <div className='flex flex-col gap-8'>
-                <div className='flex flex-col lg:flex-row gap-6'>
-                  <input
-                    type='text'
-                    name='username'
-                    id='username'
-                    autoComplete='username'
-                    placeholder='Name*'
-                    required
-                    className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-primary focus:outline w-full'
-                  />
-                  <input
-                    type='number'
-                    name='mobile'
-                    id='mobile'
-                    autoComplete='mobile'
-                    placeholder='Phone number*'
-                    required
-                    className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-primary focus:outline w-full'
-                  />
-                </div>
-                <input
-                  type='email'
-                  name='email'
-                  id='email'
-                  autoComplete='email'
-                  placeholder='Email address*'
-                  required
-                  className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-primary focus:outline'
-                />
-                <textarea
-                  rows={8}
-                  cols={50}
-                  name='message'
-                  id='message'
-                  placeholder='Write here your message'
-                  required
-                  className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-2xl outline-primary focus:outline'></textarea>
-                <button className='px-8 py-4 rounded-full bg-primary text-white text-base font-semibold w-full mobile:w-fit hover:cursor-pointer hover:bg-dark duration-300'>
-                  Send message
-                </button>
-              </div>
-            </form>
+            <TestimonialForm />
           </div>
         </div>
       </div>

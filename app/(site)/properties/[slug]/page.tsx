@@ -23,7 +23,7 @@ export default function Details() {
                         <h1 className='lg:text-52 text-40 font-semibold text-dark dark:text-white'>{item?.name}</h1>
                         <div className="flex gap-2.5">
                             <Icon icon="ph:map-pin" width={24} height={24} className="text-dark/50 dark:text-white/50" />
-                            <p className='text-dark/50 dark:text-white/50 text-xm'>{item?.location}</p>
+                            <p className='text-dark/50 dark:text-white/50 text-xm'>{item?.detailLocation}</p>
                         </div>
                     </div>
                     <div className="lg:col-span-4 col-span-12">
@@ -90,8 +90,8 @@ export default function Details() {
                         <div className="py-8 my-8 border-y border-dark/10 dark:border-white/20 flex flex-col gap-8">
                             <div className="flex items-center gap-6">
                                 <div>
-                                    <Image src="/images/SVGs/property-details.svg" width={400} height={500} alt="" className='w-8 h-8 dark:hidden' unoptimized={true} />
-                                    <Image src="/images/SVGs/property-details-white.svg" width={400} height={500} alt="" className='w-8 h-8 dark:block hidden' unoptimized={true} />
+                                    <Image src="/images/SVGs/bath.svg" width={400} height={500} alt="" className='w-8 h-8 dark:hidden' unoptimized={true} />
+                                    <Image src="/images/SVGs/bath-dark.svg" width={400} height={500} alt="" className='w-8 h-8 dark:block hidden' unoptimized={true} />
                                 </div>
                                 <div>
                                     <h3 className='text-dark dark:text-white text-xm'>Modern Bathroom</h3>
@@ -114,8 +114,8 @@ export default function Details() {
                             </div>
                             <div className="flex items-center gap-6">
                                 <div>
-                                    <Image src="/images/SVGs/energyefficient.svg" width={400} height={500} alt="" className='w-8 h-8 dark:hidden' unoptimized={true} />
-                                    <Image src="/images/SVGs/energyefficient-white.svg" width={400} height={500} alt="" className='w-8 h-8 dark:block hidden' unoptimized={true} />
+                                    <Image src="/images/SVGs/parkingarea.svg" width={400} height={500} alt="" className='w-8 h-8 dark:hidden' unoptimized={true} />
+                                    <Image src="/images/SVGs/parkingarea-dark.svg" width={400} height={500} alt="" className='w-8 h-8 dark:block hidden' unoptimized={true} />
                                 </div>
                                 <div>
                                     <h3 className='text-dark dark:text-white text-xm'>Parking Area</h3>
@@ -126,18 +126,16 @@ export default function Details() {
                             </div>
                         </div>
                         <div className="flex flex-col gap-5">
-                            <p className='text-dark dark:text-white text-xm '>
-                                Guest House Classic Unit offers a cozy and comfortable stay, ideal for travelers or small groups seeking a peaceful place to rest. 
-                                Designed with a simple and classic style, the unit provides a warm atmosphere that feels relaxing and welcoming.
-                            </p>
-                            <p className='text-dark dark:text-white text-xm '>
-                                The unit is equipped with essential facilities to support a pleasant stay, including a comfortable bedroom, smart TV, clean bathroom, 
-                                and a functional living area. Each facility is thoughtfully prepared to ensure guests enjoy comfort and convenience throughout their visit.
-                            </p>
-                            <p className='text-dark dark:text-white text-xm '>
-                                Check-in starts at 13:00 and check-out is at 12:00. The calm environment and practical amenities make Guest House Classic Unit a great choice
-                                for a simple, comfortable, and worry-free stay.
-                            </p>
+                            {item?.description
+                                ?.split("\n\n")
+                                ?.map((paragraph, index) => (
+                                    <p
+                                        key={index}
+                                        className="text-dark dark:text-white text-xm"
+                                    >
+                                        {paragraph}
+                                    </p>
+                                ))}
                         </div>
                         <div className="py-8 mt-8 border-t border-dark/5 dark:border-white/15">
                             <h3 className='text-xl font-medium'>What this property offers</h3>

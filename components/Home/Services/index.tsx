@@ -43,7 +43,7 @@ const Categories = () => {
           </div>
           <div className="lg:col-span-6 col-span-12">
             <div className="relative rounded-2xl overflow-hidden group">
-              <Link href="/residential-homes">
+              <Link href="/">
                 <Image
                   src="/images/categories/villas-1.jpg"
                   alt="villas"
@@ -53,26 +53,13 @@ const Categories = () => {
                   unoptimized={true}
                 />
               </Link>
-              <Link href="/residential-homes" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 sm:pl-6 sm:pb-6 lg:pl-10 lg:pb-10 group-hover:top-0 duration-500">
-                <div className="flex justify-end mt-6 mr-6">
-                  <div className="bg-primary text-dark rounded-full w-fit p-4" >
-                    <Icon icon="ph:arrow-right" width={24} height={24} className="text-white"  />
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2.5">
-                  <h3 className="text-white text-2xl">
-                    Kelarisan Villa
-                  </h3>
-                  <p className="text-white/80 text-base leading-6">
-                    Kelarisan Blitar offers a comfortable private villa experience with a warm atmosphere and modern facilities.
-                  </p>
-                </div>
+              <Link href="/" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 sm:pl-6 sm:pb-6 lg:pl-10 lg:pb-10">
               </Link>
             </div>
           </div>
           <div className="lg:col-span-6 col-span-12">
             <div className="relative rounded-2xl overflow-hidden group">
-              <Link href="/residential-homes">
+              <Link href="/properties/classic-unit">
                 <Image
                   src="/images/categories/villas-2.jpg"
                   alt="villas"
@@ -119,10 +106,10 @@ const Categories = () => {
                 </div>
                 <div className="flex flex-col gap-2.5">
                   <h3 className="text-white text-2xl">
-                    Kelarisan Villa
+                    Classic Unit
                   </h3>
                   <p className="text-white/80 text-base leading-6">
-                    Kelarisan Blitar offers a comfortable private villa experience.
+                    Guest House Classic Unit offers a cozy and comfortable stay.
                   </p>
                 </div>
               </Link>
@@ -148,10 +135,10 @@ const Categories = () => {
                 </div>
                 <div className="flex flex-col gap-2.5">
                   <h3 className="text-white text-2xl">
-                    Kelarisan Villa
+                    Comfort Unit
                   </h3>
                   <p className="text-white/80 text-base leading-6">
-                    Kelarisan Blitar offers a comfortable private villa experience.
+                    Guest House Comfort Unit offers a warm and comfortable stay.
                   </p>
                 </div>
               </Link>

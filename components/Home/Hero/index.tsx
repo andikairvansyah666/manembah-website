@@ -39,8 +39,8 @@ export default function HeroSection() {
         CONTENT
       ===================================================== */}
       <div className="relative z-20 container max-w-8xl mx-auto px-5 2xl:px-0 pt-32 md:pt-28 pb-24">
-        <div className="text-white text-center md:text-start max-w-6xl">
-          <p className="text-sm sm:text-base font-medium">
+        <div className="text-white text-start max-w-6xl">
+          <p className="text-[16px] sm:text-base font-medium">
             Private Villa in Blitar
           </p>
 
@@ -48,7 +48,7 @@ export default function HeroSection() {
             YOUR VILLA EXPERIENCE STARTS HERE
           </h1>
 
-          <div className="flex flex-col xs:flex-row justify-center md:justify-start gap-4">
+          <div className="flex flex-col xs:flex-row items-start justify-start gap-4">
             <Link
               href="/contactus"
               className="px-8 py-4 bg-primary border border-primary text-white font-semibold rounded-full hover:bg-white hover:text-primary duration-300"

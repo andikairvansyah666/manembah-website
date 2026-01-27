@@ -38,13 +38,13 @@ const FAQ: React.FC = () => {
                                 <AccordionItem value="item-1">
                                     <AccordionTrigger>1. Is parking available at the villa?</AccordionTrigger>
                                     <AccordionContent>
-                                        Discover a diverse range of premium properties, from luxurious apartments to spacious villas, tailored to your needs.
+                                        Yes, private and secure parking is available for guests.
                                     </AccordionContent>
                                 </AccordionItem>
                                 <AccordionItem value="item-2">
-                                    <AccordionTrigger>2. Is the private pool available for all guests?</AccordionTrigger>
+                                    <AccordionTrigger>2. Is parking available at the guest house?</AccordionTrigger>
                                     <AccordionContent>
-                                        Discover a diverse range of premium properties, from luxurious apartments to spacious villas, tailored to your needs.
+                                        Yes, a designated parking area is provided for guests.
                                     </AccordionContent>
                                 </AccordionItem>
                                 <AccordionItem value="item-3">
