@@ -15,7 +15,7 @@ const TestimonialForm = () => {
           <div className='w-full space-y-3'>
             <label
               htmlFor='username'
-              className='text-base font-medium text-black dark:text-white'
+              className='block mb-2 text-base font-medium text-black dark:text-white'
             >
               Name
             </label>
@@ -32,7 +32,7 @@ const TestimonialForm = () => {
           <div className='w-full space-y-3'>
             <label
               htmlFor='email'
-              className='text-base font-medium text-black dark:text-white'
+              className='block mb-2 text-base font-medium text-black dark:text-white'
             >
               Email Address
             </label>
@@ -53,7 +53,7 @@ const TestimonialForm = () => {
           <div className='w-full space-y-3 relative'>
             <label
               htmlFor='category'
-              className='text-base font-medium text-black dark:text-white'
+              className='block mb-2 text-base font-medium text-black dark:text-white'
             >
               Category
             </label>
@@ -78,7 +78,7 @@ const TestimonialForm = () => {
           <div className='w-full space-y-3 relative'>
             <label
               htmlFor='stayType'
-              className='text-base font-medium text-black dark:text-white'
+              className='block mb-2 text-base font-medium text-black dark:text-white'
             >
               Stay Type
             </label>
@@ -104,7 +104,7 @@ const TestimonialForm = () => {
 
         {/* Rating */}
         <div className='space-y-3'>
-          <label className='text-base font-medium text-black dark:text-white'>
+          <label className='block mb-2 text-base font-medium text-black dark:text-white'>
             Rating
           </label>
           <div className='flex gap-2'>
@@ -136,7 +136,7 @@ const TestimonialForm = () => {
         <div className='space-y-3'>
           <label
             htmlFor='testimonial'
-            className='text-base font-medium text-black dark:text-white'
+            className='block mb-2 text-base font-medium text-black dark:text-white'
           >
             Testimonial
           </label>

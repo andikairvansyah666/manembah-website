@@ -66,8 +66,8 @@ export default function HeroSection() {
       {/* =====================================================
         INFO CARD (BOTTOM)
       ===================================================== */}
-      <div className="relative z-30 md:absolute md:bottom-0 md:right-0 bg-white dark:bg-black py-8 sm:py-12 px-4 sm:px-8 md:pl-10 md:pr-16 lg:pr-[200px] xl:pr-[295px] rounded-2xl md:rounded-none md:rounded-tl-2xl mx-4 md:mx-0 mt-16 md:mt-0">
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:flex gap-6 sm:gap-12 text-black dark:text-white text-center md:text-start">
+      <div className="relative z-30 md:absolute md:bottom-0 md:right-0 bg-white dark:bg-black py-8 sm:py-9 px-4 sm:px-8 md:pl-10 md:pr-16 lg:pr-[160px] xl:pr-[200px] rounded-2xl md:rounded-none md:rounded-tl-2xl mx-4 md:mx-0 mt-16 md:mt-0">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:flex gap-6 sm:gap-15 text-black dark:text-white text-center md:text-start">
           <div className="flex flex-col items-center gap-3">
             <Image
                 src={'/images/hero/sofa.svg'}

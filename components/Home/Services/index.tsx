@@ -24,13 +24,13 @@ const Categories = () => {
         />
       </div>
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0 relative z-10">
-        <div className="grid grid-cols-12 items-center gap-10">
+        <div className="grid grid-cols-12 items-center gap-6 md:gap-10">
           <div className="lg:col-span-6 col-span-12">
             <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2.5">
               <Icon icon="ph:house-simple-fill" className="text-2xl text-primary " />
               About Us
             </p>
-            <h2 className="lg:text-52 text-40 mt-4 mb-2 lg:max-w-full font-medium leading-[1.2] text-dark dark:text-white">
+            <h2 className="text-3xl md:text-52 mt-4 mb-2 lg:max-w-full font-medium leading-[1.2] text-dark dark:text-white">
               Experience a Relaxing Stay
               at Kelarisan Blitar
             </h2>
@@ -41,7 +41,7 @@ const Categories = () => {
               View properties
             </Link>
           </div>
-          <div className="lg:col-span-6 col-span-12">
+          <div className="lg:col-span-6 col-span-12 sm:col-span-12">
             <div className="relative rounded-2xl overflow-hidden group">
               <Link href="/">
                 <Image
@@ -57,7 +57,7 @@ const Categories = () => {
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-6 col-span-12">
+          <div className="lg:col-span-6 col-span-12 sm:col-span-12">
             <div className="relative rounded-2xl overflow-hidden group">
               <Link href="/properties/classic-unit">
                 <Image
@@ -86,7 +86,7 @@ const Categories = () => {
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-3 col-span-6">
+          <div className="lg:col-span-3 col-span-12 xs:col-span-6">
             <div className="relative rounded-2xl overflow-hidden group">
               <Link href="/residential-homes">
                 <Image
@@ -115,7 +115,7 @@ const Categories = () => {
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-3 col-span-6">
+          <div className="lg:col-span-3 col-span-12 xs:col-span-6">
             <div className="relative rounded-2xl overflow-hidden group">
               <Link href="/residential-homes">
                 <Image
