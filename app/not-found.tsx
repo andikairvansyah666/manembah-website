@@ -3,22 +3,13 @@ import { Metadata } from "next";
 import { Icon } from "@iconify/react/dist/iconify.js"
 
 export const metadata: Metadata = {
-  title: "404 Page | Property ",
+  title: "404 Page | Manembah ",
 };
 
 const ErrorPage = () => {
   return (
     <>
-      <section className="flex justify-center pb-0!">
-        <Image
-          src="/images/404.png"
-          alt="404"
-          width={490}
-          height={450}
-          unoptimized={true}
-        />
-      </section>
-      <section className="text-center bg-cover relative overflow-x-hidden" >
+      <section className="text-center bg-cover relative overflow-x-hidden pb-0!" >
         <div className='flex gap-2.5 items-center justify-center'>
           <span>
             <Icon
@@ -38,6 +29,15 @@ const ErrorPage = () => {
         <p className="text-lg text-dark/50 dark:text-white/50 font-normal w-full mx-auto">
           Looks like you’ve hit a dead end — but don’t worry, we’ll help you get back on track
         </p>
+      </section>
+      <section className="flex justify-center pb-30!">
+        <Image
+          src="/images/404.png"
+          alt="404"
+          width={490}
+          height={450}
+          unoptimized={true}
+        />
       </section>
     </>
   );

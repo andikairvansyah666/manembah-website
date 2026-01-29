@@ -45,18 +45,18 @@ const Header: React.FC = () => {
           <div>
             <Link href='/'>
               <Image
-                src={'/images/header/logo.svg'}
+                src={'/images/header/logo.png'}
                 alt='logo'
-                width={68}
-                height={22}
+                width={62}
+                height={16}
                 unoptimized={true}
                 className={`${sticky ? "block dark:hidden" : isHomepage ? "hidden" : "block dark:hidden"}`}
               />
               <Image
-                src={!isHomepage && !sticky ? '/images/header/logo.svg' : '/images/header/logo.svg'}
+                src={!isHomepage && !sticky ? '/images/header/logo.png' : '/images/header/logo.png'}
                 alt='logo'
-                width={68}
-                height={22}
+                width={62}
+                height={16}
                 unoptimized={true}
                 className={`${sticky ? "hidden dark:block" : isHomepage ? "block" : "hidden dark:block"}`}
               />
@@ -107,6 +107,17 @@ const Header: React.FC = () => {
                 </span>
                 <span className='hidden sm:block'>Menu</span>
               </button>
+            </div>
+            <div className='hidden sm:block'>
+              <Link href="/profile">
+                <Image
+                  src='/images/header/avatar.png'
+                  alt='avatar'
+                  width={52}
+                  height={52}
+                  className='rounded-full hover:opacity-80 transition-opacity'
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -171,6 +182,18 @@ const Header: React.FC = () => {
             </Link>
             <Link href="#" className='text-base sm:text-xm font-medium text-inherit hover:text-primary'>
               +62 821-3145-9670{' '}
+            </Link>
+          </div>
+          <div className='flex items-center gap-4 mb-6 sm:hidden'>
+            <Link href="/profile" className='flex items-center gap-4' onClick={() => setNavbarOpen(false)}>
+               <Image
+                  src='/images/header/avatar.png'
+                  alt='avatar'
+                  width={40}
+                  height={40}
+                  className='rounded-full'
+                />
+                <span className='text-white font-medium'>User</span>
             </Link>
           </div>
         </div>

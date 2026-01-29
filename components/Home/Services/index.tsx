@@ -49,11 +49,11 @@ const Categories = () => {
                   alt="villas"
                   width={680}
                   height={386}
-                  className="w-full"
+                  className="w-full h-[240px] sm:h-[280px] md:h-auto object-cover"
                   unoptimized={true}
                 />
               </Link>
-              <Link href="/" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 sm:pl-6 sm:pb-6 lg:pl-10 lg:pb-10">
+              <Link href="/">
               </Link>
             </div>
           </div>
@@ -65,14 +65,14 @@ const Categories = () => {
                   alt="villas"
                   width={680}
                   height={386}
-                  className="w-full"
+                  className="w-full h-[240px] sm:h-[280px] md:h-auto object-cover"
                   unoptimized={true}
                 />
               </Link>
-              <Link href="/residential-homes" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 sm:pl-6 sm:pb-6 lg:pl-10 lg:pb-10 group-hover:top-0 duration-500">
+              <Link href="/residential-homes" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-0 md:top-full md:group-hover:top-0 flex flex-col justify-between pl-4 pb-4 sm:pl-6 sm:pb-6 lg:pl-10 lg:pb-10 transition-all duration-500">
                 <div className="flex justify-end mt-6 mr-6">
                   <div className="bg-primary text-dark rounded-full w-fit p-4" >
-                    <Icon icon="ph:arrow-right" width={24} height={24} className="text-white" />
+                    <Icon icon="ph:arrow-right" width={24} height={24} className="text-white w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2.5">
@@ -86,7 +86,7 @@ const Categories = () => {
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-3 col-span-12 xs:col-span-6">
+          <div className="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-3">
             <div className="relative rounded-2xl overflow-hidden group">
               <Link href="/residential-homes">
                 <Image
@@ -94,14 +94,14 @@ const Categories = () => {
                   alt="villas"
                   width={320}
                   height={386}
-                  className="w-full"
+                  className="w-full h-[240px] sm:h-[280px] md:h-auto object-cover"
                   unoptimized={true}
                 />
               </Link>
-              <Link href="/residential-homes" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 sm:pl-6 sm:pb-6 lg:pl-10 lg:pb-10 group-hover:top-0 duration-500">
+              <Link href="/residential-homes" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-0 md:top-full md:group-hover:top-0 flex flex-col justify-between pl-4 pb-4 sm:pl-6 sm:pb-6 lg:pl-10 lg:pb-10 transition-all duration-500">
                 <div className="flex justify-end mt-6 mr-6">
                   <div className="bg-primary text-dark rounded-full w-fit p-4">
-                    <Icon icon="ph:arrow-right" width={24} height={24} className="text-white" />
+                    <Icon icon="ph:arrow-right" width={24} height={24} className="text-white w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"/>
                   </div>
                 </div>
                 <div className="flex flex-col gap-2.5">
@@ -115,7 +115,7 @@ const Categories = () => {
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-3 col-span-12 xs:col-span-6">
+          <div className="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-3">
             <div className="relative rounded-2xl overflow-hidden group">
               <Link href="/residential-homes">
                 <Image
@@ -123,14 +123,14 @@ const Categories = () => {
                   alt="office"
                   width={320}
                   height={386}
-                  className="w-full"
+                  className="w-full h-[240px] sm:h-[280px] md:h-auto object-cover"
                   unoptimized={true}
                 />
               </Link>
-              <Link href="/residential-homes" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 sm:pl-6 sm:pb-6 lg:pl-10 lg:pb-10 group-hover:top-0 duration-500">
+              <Link href="/residential-homes" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-0 md:top-full md:group-hover:top-0 flex flex-col justify-between pl-4 pb-4 sm:pl-6 sm:pb-6 lg:pl-10 lg:pb-10 transition-all duration-500">
                 <div className="flex justify-end mt-6 mr-6">
                   <div className="bg-primary text-dark rounded-full w-fit p-4">
-                    <Icon icon="ph:arrow-right" width={24} height={24} className="text-white" />
+                    <Icon icon="ph:arrow-right" width={24} height={24} className="text-white w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2.5">
