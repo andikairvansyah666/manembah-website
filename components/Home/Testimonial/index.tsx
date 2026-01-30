@@ -12,25 +12,12 @@ import { testimonials } from "@/app/api/testimonial";
 
 const Testimonial = () => {
     const [api, setApi] = React.useState<CarouselApi | undefined>(undefined);
-    const [current, setCurrent] = React.useState(0);
-    const [count, setCount] = React.useState(0);
 
     React.useEffect(() => {
         if (!api) return;
-
-        setCount(api.scrollSnapList().length);
-        setCurrent(api.selectedScrollSnap() + 1);
-
-        api.on("select", () => {
-            setCurrent(api.selectedScrollSnap() + 1);
-        });
     }, [api]);
 
-    const handleDotClick = (index: number) => {
-        if (api) {
-            api.scrollTo(index);
-        }
-    };
+
 
     return (
         <section className="bg-dark relative overflow-hidden" id="testimonial">
@@ -38,20 +25,50 @@ const Testimonial = () => {
                 <Image
                     src="/images/testimonial/Vector.svg"
                     alt="victor"
-                    width={800}
+                    width={850}
                     height={1100}
                     unoptimized={true}
                 />
             </div>
             <div className="container max-w-8xl mx-auto px-5 2xl:px-0">
-                <div className="space-y-2 sm:space-y-3 lg:space-y-4">
-                    <p className="text-white text-base font-semibold flex gap-2">
-                        <Icon icon="ph:house-simple-fill" className="text-2xl text-primary" />
-                        Testimonials
-                    </p>
-                    <h2 className="text-4xl sm:text-4xl lg:text-52 font-medium text-white leading-tight">
-                        Reviews from Our Guests
-                    </h2>
+                <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-6">
+                    <div className="space-y-2 sm:space-y-3 lg:space-y-4">
+                        <p className="text-white text-base font-semibold flex gap-2">
+                            <Icon icon="ph:house-simple-fill" className="text-2xl text-primary" />
+                            Testimonials
+                        </p>
+                        <h2 className="text-4xl sm:text-4xl lg:text-52 font-medium text-white leading-tight">
+                            Reviews from Our Guests
+                        </h2>
+                    </div>
+                    <div className="hidden lg:flex gap-4 p-2.5 justify-center relative z-10 lg:mb-2">
+                        <button
+                            onClick={() => api?.scrollPrev()}
+                            className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center hover:opacity-80 duration-300 shadow-lg hover:cursor-pointer"
+                            aria-label="Previous slide"
+                        >
+                            <Image 
+                                src="/images/testimonial/arrow-left.png" 
+                                alt="Previous" 
+                                width={48} 
+                                height={48} 
+                                unoptimized 
+                            />
+                        </button>
+                        <button
+                            onClick={() => api?.scrollNext()}
+                            className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center hover:opacity-80 duration-300 shadow-lg hover:cursor-pointer"
+                            aria-label="Next slide"
+                        >
+                            <Image 
+                                src="/images/testimonial/arrow-right.png" 
+                                alt="Next" 
+                                width={48} 
+                                height={48} 
+                                unoptimized 
+                            />
+                        </button>
+                    </div>
                 </div>
                 <Carousel
                     setApi={setApi}
@@ -100,16 +117,33 @@ const Testimonial = () => {
                         ))}
                     </CarouselContent>
                 </Carousel>
-                <div className="absolute bottom-8 sm:bottom-16 md:bottom-24 left-1/2 transform -translate-x-1/2 flex gap-2.5 p-2.5 bg-white/20 rounded-full">
-                    {Array.from({ length: count }).map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => handleDotClick(index)}
-                            className={`w-2.5 h-2.5 rounded-full ${current === index + 1 ? "bg-white" : "bg-white/50"
-                                }`}
-                            aria-label={`Go to slide ${index + 1}`}
+                <div className="flex lg:hidden gap-4 p-2.5 items-start mt-10 relative z-10">
+                    <button
+                        onClick={() => api?.scrollPrev()}
+                        className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center hover:opacity-80 duration-300 shadow-lg hover:cursor-pointer"
+                        aria-label="Previous slide"
+                    >
+                        <Image 
+                            src="/images/testimonial/arrow-left.png" 
+                            alt="Previous" 
+                            width={48} 
+                            height={48} 
+                            unoptimized 
                         />
-                    ))}
+                    </button>
+                    <button
+                        onClick={() => api?.scrollNext()}
+                        className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center hover:opacity-80 duration-300 shadow-lg hover:cursor-pointer"
+                        aria-label="Next slide"
+                    >
+                        <Image 
+                            src="/images/testimonial/arrow-right.png" 
+                            alt="Next" 
+                            width={48} 
+                            height={48} 
+                            unoptimized 
+                        />
+                    </button>
                 </div>
             </div>
         </section>

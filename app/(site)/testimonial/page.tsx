@@ -2,6 +2,7 @@ import { Icon } from '@iconify/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import TestimonialForm from '@/components/Testimonial/TestimonialForm'
+import TestimonialSlider from '@/components/Home/Testimonial'
 import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Testimonial | Manembah",
@@ -89,6 +90,9 @@ export default function Testimonial() {
             <TestimonialForm />
           </div>
         </div>
+      </div>
+      <div className='mt-20'>
+        <TestimonialSlider />
       </div>
     </div>
   )

@@ -6,9 +6,16 @@ import { Icon } from '@iconify/react';
 import { testimonials } from '@/app/api/testimonial';
 import Link from 'next/link';
 import Image from 'next/image';
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    type CarouselApi,
+} from "@/components/ui/carousel";
 
 export default function Details() {
     const { slug } = useParams();
+    const [api, setApi] = React.useState<CarouselApi | undefined>(undefined);
 
     const item = propertyHomes.find((item) => item.slug === slug);
     return (
@@ -278,19 +285,41 @@ export default function Details() {
                                 <Image src="/images/properties/vector.svg" width={400} height={500} alt="vector" unoptimized={true} />
                             </div>
                         </div>
-                        {testimonials.slice(0, 1).map((item, index) => (
-                            <div key={index} className="border p-6 lg:p-10 rounded-2xl border-dark/10 dark:border-white/20 mt-10 flex flex-col gap-6">
-                                <Icon icon="ph:house-simple" width={44} height={44} className="text-primary" />
-                                <p className='text-xm text-dark dark:text-white'>{item.review}</p>
-                                <div className="flex items-center gap-6">
-                                    <Image src={item.image} alt={item.name} width={400} height={500} className='w-20 h-20 rounded-2xl' unoptimized={true} />
-                                    <div className="">
-                                        <h3 className='text-xm text-dark dark:text-white'>{item.name}</h3>
-                                        <h4 className='text-base text-dark/50 dark:text-white/50'>{item.position}</h4>
-                                    </div>
-                                </div>
+                        <Carousel setApi={setApi} opts={{ loop: true }} className="mt-10">
+                            <CarouselContent>
+                                {testimonials.map((item, index) => (
+                                    <CarouselItem key={index}>
+                                        <div className="border p-6 lg:p-10 rounded-2xl border-dark/10 dark:border-white/20 flex flex-col gap-6 h-full">
+                                            <Icon icon="ph:house-simple" width={44} height={44} className="text-primary" />
+                                            <p className='text-xm text-dark dark:text-white'>{item.review}</p>
+                                            <div className="flex items-center gap-6 mt-auto">
+                                                <Image src={item.image} alt={item.name} width={400} height={500} className='w-20 h-20 rounded-2xl' unoptimized={true} />
+                                                <div className="">
+                                                    <h3 className='text-xm text-dark dark:text-white'>{item.name}</h3>
+                                                    <h4 className='text-base text-dark/50 dark:text-white/50'>{item.position}</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </CarouselItem>
+                                ))}
+                            </CarouselContent>
+                            <div className="flex gap-4 p-2.5 justify-center mt-6">
+                                <button
+                                    onClick={() => api?.scrollPrev()}
+                                    className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center hover:opacity-80 duration-300 shadow-md hover:cursor-pointer"
+                                    aria-label="Previous slide"
+                                >
+                                    <Image src="/images/testimonial/arrow-left.png" alt="Previous" width={40} height={40} unoptimized />
+                                </button>
+                                <button
+                                    onClick={() => api?.scrollNext()}
+                                    className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center hover:opacity-80 duration-300 shadow-md hover:cursor-pointer"
+                                    aria-label="Next slide"
+                                >
+                                    <Image src="/images/testimonial/arrow-right.png" alt="Next" width={40} height={40} unoptimized />
+                                </button>
                             </div>
-                        ))}
+                        </Carousel>
                     </div>
                 </div>
             </div>
