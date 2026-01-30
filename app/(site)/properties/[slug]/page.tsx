@@ -12,18 +12,18 @@ export default function Details() {
 
     const item = propertyHomes.find((item) => item.slug === slug);
     return (
-        <section className="!pt-44 pb-20 relative" >
+        <section className="pt-32 lg:pt-44 pb-20 relative" >
             <div className="container mx-auto max-w-8xl px-5 2xl:px-0">
                 <div className="grid grid-cols-12 items-end gap-6">
-                    <div className="lg:col-span-8 col-span-12">
-                        <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2">
-                            <Icon icon="ph:house-simple-fill" className="text-2xl text-primary " />
+                    <div className="lg:col-span-8 col-span-12 flex flex-col gap-2 sm:gap-1.5">
+                        <p className="text-dark/75 dark:text-white/75 text-sm sm:text-base font-semibold flex items-center gap-2">
+                            <Icon icon="ph:house-simple-fill" className="text-xl sm:text-2xl text-primary" />
                             Guest House
                         </p>
-                        <h1 className='lg:text-52 text-40 font-semibold text-dark dark:text-white'>{item?.name}</h1>
-                        <div className="flex gap-2.5">
-                            <Icon icon="ph:map-pin" width={24} height={24} className="text-dark/50 dark:text-white/50" />
-                            <p className='text-dark/50 dark:text-white/50 text-xm'>{item?.detailLocation}</p>
+                        <h1 className='text-3xl sm:text-4xl lg:text-52 font-semibold text-dark dark:text-white leading-tight'>{item?.name}</h1>
+                        <div className="flex items-start gap-2">
+                            <Icon icon="ph:map-pin" className="text-xl sm:text-2xl text-dark/50 dark:text-white/50 mt-1 flex-shrink-0" />
+                            <p className='text-dark/50 dark:text-white/50 text-base sm:text-xm'>{item?.detailLocation}</p>
                         </div>
                     </div>
                     <div className="lg:col-span-4 col-span-12">
@@ -53,7 +53,7 @@ export default function Details() {
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-12 mt-8 gap-8">
+                <div className="grid grid-cols-12 mt-8 gap-4 lg:gap-8">
                     <div className="lg:col-span-8 col-span-12 row-span-2">
                         {item?.images && item?.images[1] && (
                             <div className="">
@@ -62,7 +62,7 @@ export default function Details() {
                                     alt="Main Property Image"
                                     width={400}
                                     height={500}
-                                    className="rounded-2xl w-full h-540"
+                                    className="rounded-2xl w-full h-[300px] sm:h-[400px] lg:h-540 object-cover"
                                     unoptimized={true}
                                 />
                             </div>
@@ -75,16 +75,16 @@ export default function Details() {
                     </div>
                     <div className="lg:col-span-2 col-span-6">
                         {item?.images && item?.images[3] && (
-                            <Image src={item.images[3]?.src} alt="Property Image 3" width={400} height={500} className="rounded-2xl w-full h-full" unoptimized={true} />
+                            <Image src={item.images[3]?.src} alt="Property Image 3" width={400} height={500} className="rounded-2xl w-full h-[150px] sm:h-[200px] lg:h-full object-cover" unoptimized={true} />
                         )}
                     </div>
                     <div className="lg:col-span-2 col-span-6">
                         {item?.images && item?.images[4] && (
-                            <Image src={item.images[4]?.src} alt="Property Image 4" width={400} height={500} className="rounded-2xl w-full h-full" unoptimized={true} />
+                            <Image src={item.images[4]?.src} alt="Property Image 4" width={400} height={500} className="rounded-2xl w-full h-[150px] sm:h-[200px] lg:h-full object-cover" unoptimized={true} />
                         )}
                     </div>
                 </div>
-                <div className="grid grid-cols-12 gap-8 mt-10">
+                <div className="grid grid-cols-12 gap-6 lg:gap-8 mt-10">
                     <div className="lg:col-span-8 col-span-12">
                         <h3 className='text-xl font-medium'>Property details</h3>
                         <div className="py-8 my-8 border-y border-dark/10 dark:border-white/20 flex flex-col gap-8">
@@ -139,7 +139,7 @@ export default function Details() {
                         </div>
                         <div className="py-8 mt-8 border-t border-dark/5 dark:border-white/15">
                             <h3 className='text-xl font-medium'>What this property offers</h3>
-                            <div className="grid grid-cols-3 mt-5 gap-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-5 gap-6">
                                 <div className="flex items-center gap-2.5">
                                     <Image
                                         src="/images/SVGs/point.svg"
@@ -256,7 +256,7 @@ export default function Details() {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full aspect-[6/3] rounded-2xl overflow-hidden">
+                        <div className="w-full aspect-square sm:aspect-video lg:aspect-[6/3] rounded-2xl overflow-hidden mt-8">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.1193898715846!2d112.18352637442726!3d-8.089305491939179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78ed946a5cd16d%3A0xf6860adb841a8327!2sMANEMBAH%20BLITAR%20FAMILY%20HOMESTAY!5e0!3m2!1sid!2sid!4v1769351506024!5m2!1sid!2sid"
                                 className="w-full h-full border-0"
@@ -279,7 +279,7 @@ export default function Details() {
                             </div>
                         </div>
                         {testimonials.slice(0, 1).map((item, index) => (
-                            <div key={index} className="border p-10 rounded-2xl border-dark/10 dark:border-white/20 mt-10 flex flex-col gap-6">
+                            <div key={index} className="border p-6 lg:p-10 rounded-2xl border-dark/10 dark:border-white/20 mt-10 flex flex-col gap-6">
                                 <Icon icon="ph:house-simple" width={44} height={44} className="text-primary" />
                                 <p className='text-xm text-dark dark:text-white'>{item.review}</p>
                                 <div className="flex items-center gap-6">

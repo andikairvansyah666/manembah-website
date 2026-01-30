@@ -39,8 +39,8 @@ const Header: React.FC = () => {
 
 
   return (
-    <header className={`fixed h-24 py-1 z-50 w-full bg-transparent transition-all duration-300 lg:px-0 px-4 ${sticky ? "top-3" : "top-0"}`}>
-      <nav className={`container mx-auto max-w-8xl flex items-center justify-between py-4 duration-300 ${sticky ? "shadow-lg bg-white dark:bg-dark rounded-full top-5 px-4 " : "shadow-none top-0"}`}>
+    <header className={`fixed ${navbarOpen ? 'h-24' : 'h-16 lg:h-24'} py-2 z-50 w-full bg-transparent transition-all duration-300 lg:px-0 px-4 ${sticky ? "top-3" : "top-0"}`}>
+      <nav className={`container mx-auto max-w-8xl flex items-center justify-between ${navbarOpen ? 'py-4' : 'py-2 lg:py-4'} duration-300 ${sticky ? "shadow-lg bg-white dark:bg-dark rounded-full px-2.5 " : "shadow-none"}`}>
         <div className='flex justify-between items-center gap-2 w-full'>
           <div>
             <Link href='/'>
@@ -69,15 +69,11 @@ const Header: React.FC = () => {
             >
               <Icon
                 icon={'solar:sun-bold'}
-                width={32}
-                height={32}
-                className={`dark:hidden block ${sticky ? 'text-primary' : isHomepage ? 'text-white' : 'text-[#131313]'}`}
+                className={`w-7 h-7 sm:w-8 sm:h-8 dark:hidden block ${sticky ? 'text-primary' : isHomepage ? 'text-white' : 'text-[#131313]'}`}
               />
               <Icon
                 icon={'solar:moon-bold'}
-                width={32}
-                height={32}
-                className={`dark:block hidden ${sticky ? 'text-primary' : isHomepage ? 'text-white' : 'text-white'}`}
+                className={`w-7 h-7 sm:w-8 sm:h-8 dark:block hidden ${sticky ? 'text-primary' : isHomepage ? 'text-white' : 'text-white'}`}
               />
             </button>
             <div className={`hidden md:block`}>
@@ -102,7 +98,7 @@ const Header: React.FC = () => {
                       : 'text-white bg-[#131313] hover:bg-transparent hover:text-[#131313] border-[#131313]'
                   }`}
                 aria-label='Toggle mobile menu'>
-                <span>
+                <span className='scale-90 sm:scale-100'>
                   <Icon icon={'ph:list'} width={24} height={24} />
                 </span>
                 <span className='hidden sm:block'>Menu</span>
@@ -113,9 +109,9 @@ const Header: React.FC = () => {
                 <Image
                   src='/images/header/avatar.png'
                   alt='avatar'
-                  width={52}
-                  height={52}
-                  className='rounded-full hover:opacity-80 transition-opacity'
+                  width={40}
+                  height={40}
+                  className='rounded-full hover:opacity-80 transition-opacity w-8 h-8 sm:w-10 sm:h-10 lg:w-[52px] lg:h-[52px]'
                 />
               </Link>
             </div>

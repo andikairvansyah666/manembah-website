@@ -44,12 +44,12 @@ const Testimonial = () => {
                 />
             </div>
             <div className="container max-w-8xl mx-auto px-5 2xl:px-0">
-                <div>
+                <div className="space-y-2 sm:space-y-3 lg:space-y-4">
                     <p className="text-white text-base font-semibold flex gap-2">
                         <Icon icon="ph:house-simple-fill" className="text-2xl text-primary" />
                         Testimonials
                     </p>
-                    <h2 className="lg:text-52 text-40 font-medium text-white">
+                    <h2 className="text-4xl sm:text-4xl lg:text-52 font-medium text-white leading-tight">
                         Reviews from Our Guests
                     </h2>
                 </div>
@@ -63,7 +63,7 @@ const Testimonial = () => {
                         {testimonials.map((item, index) => (
                             <CarouselItem key={index} className="mt-9">
                                 <div className="lg:flex items-center gap-11">
-                                    <div className="flex items-start gap-11 lg:pr-20">
+                                    <div className="flex flex-col sm:flex-row items-start gap-6 lg:gap-11 lg:pr-20">
                                         <div>
                                             <Icon icon="ph:house-simple" width={32} height={32} className="text-primary" />
                                         </div>

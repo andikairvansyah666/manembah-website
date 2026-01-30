@@ -53,14 +53,14 @@ const FeaturedProperty: React.FC = () => {
                       alt={item.alt}
                       width={680}
                       height={530}
-                      className="rounded-2xl w-full h-540"
+                      className="rounded-2xl w-full h-[300px] sm:h-[400px] lg:h-540 object-cover"
                       unoptimized={true}
                     />
                   </CarouselItem>
                 ))}
               </CarouselContent>
             </Carousel>
-            <div className="absolute left-2/5 bg-dark/50 rounded-full py-2.5 bottom-10 flex justify-center mt-4 gap-2.5 px-2.5">
+            <div className="absolute left-1/2 -translate-x-1/2 bg-dark/50 rounded-full py-2.5 bottom-6 sm:bottom-10 flex justify-center mt-4 gap-2.5 px-2.5">
               {Array.from({ length: count }).map((_, index) => (
                 <button
                   key={index}
@@ -76,7 +76,7 @@ const FeaturedProperty: React.FC = () => {
                 <Icon icon="ph:house-simple-fill" className="text-2xl text-primary " />
                 Villa
               </p>
-              <h2 className="lg:text-52 text-40 font-medium text-dark dark:text-white">
+              <h2 className="text-3xl sm:text-4xl lg:text-52 font-medium text-dark dark:text-white leading-tight">
                 Kelarisan Villa
               </h2>
               <div className="flex items-center gap-2.5">
@@ -180,7 +180,7 @@ const FeaturedProperty: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-10">
-              <Link href="/contactus" className="py-4 px-8 bg-primary hover:bg-dark duration-300 rounded-full text-white">
+              <Link href="/properties/classic-unit" className="py-4 px-8 bg-primary hover:bg-dark duration-300 rounded-full text-white">
                 View Details
               </Link>
               <div>
