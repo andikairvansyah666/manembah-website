@@ -71,7 +71,7 @@ const FeaturedProperty: React.FC = () => {
             </div>
           </div>
           <div className="flex flex-col gap-10">
-            <div>
+            <div className="space-y-1 sm:space-y-2">
               <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2">
                 <Icon icon="ph:house-simple-fill" className="text-2xl text-primary " />
                 Villa

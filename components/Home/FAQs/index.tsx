@@ -23,16 +23,18 @@ const FAQ: React.FC = () => {
                         />
                     </div>
                     <div className='lg:px-12'>
-                        <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2">
-                            <Icon icon="ph:house-simple-fill" className="text-2xl text-primary " />
-                            FAQs
-                        </p>
-                        <h2 className='lg:text-52 text-40 leading-[1.2] font-medium text-dark dark:text-white'>
-                            Things You Need to Know
-                        </h2>
-                        <p className='text-dark/50 dark:text-white/50 pr-0 sm:pr-10 lg:pr-20'>
-                            Find answers to the most common questions about our villa, facilities, and booking process.
-                        </p>
+                        <div className="space-y-2 sm:space-y-3">
+                            <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2.5">
+                                <Icon icon="ph:house-simple-fill" className="text-2xl text-primary " />
+                                FAQs
+                            </p>
+                            <h2 className='text-3xl sm:text-4xl lg:text-52 leading-[1.2] font-medium text-dark dark:text-white'>
+                                Things You Need to Know
+                            </h2>
+                            <p className='text-dark/50 dark:text-white/50 pr-0 sm:pr-10 lg:pr-20 text-base'>
+                                Find answers to the most common questions about our villa, facilities, and booking process.
+                            </p>
+                        </div>
                         <div className="my-8">
                             <Accordion type="single" defaultValue="item-1" collapsible className="w-full flex flex-col gap-6">
                                 <AccordionItem value="item-1">
