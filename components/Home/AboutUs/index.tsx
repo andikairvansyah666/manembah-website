@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Categories = () => {
   return (
-    <section className="relative overflow-hidden">
+    <section id="about" className="relative overflow-hidden">
       <div className="absolute left-0 top-0">
         <Image
           src="/images/categories/Vector.svg"

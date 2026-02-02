@@ -92,4 +92,35 @@ export const propertyHomes: PropertyHomes[] = [
       },
     ]
   },
+  {
+    name: 'Kelarisan Villa',
+    slug: 'kelarisan-villa',
+    location: 'Brigjen Katamso, Blitar',
+    detailLocation: 'Graha Permata Regency, Blitar',
+    rate: '650K/Day',
+    beds: 3,
+    baths: 2,
+    area: 180,
+    description: `Kelarisan Villa offers a comfortable and private stay, ideal for families or groups looking for a relaxing getaway. Designed with a modern layout, the villa provides a warm and welcoming atmosphere that feels like home. \n
+                  The villa is equipped with complete facilities, including a private swimming pool, smart TV, spacious living room, and a fully equipped kitchen. These amenities are thoughtfully provided to ensure guests enjoy both comfort and convenience throughout their stay. \n
+                  Kelarisan Villa also offers a secure parking area and a calm environment, making it suitable for quality time with family or friends. The private setting allows guests to relax, unwind, and enjoy their moments without disturbance. \n
+                  Check-in starts at 13:00 and check-out is at 12:00. The villa accommodates up to 9 guests, and any additional guests beyond this limit will be charged IDR 50,000 per person.`,
+    images: [
+      {
+        src: "/images/properties/property4/mainvilla1.jpg",
+      },
+      {
+        src: "/images/properties/property4/image-2.jpg"
+      },
+      {
+        src: "/images/properties/property4/image-3.jpg"
+      },
+      {
+        src: "/images/properties/property4/image-4.jpg"
+      },
+      {
+        src: "/images/properties/property4/image-5.jpg"
+      },
+    ]
+  },
 ]

@@ -127,7 +127,7 @@ const Testimonial = () => {
                             src="/images/testimonial/arrow-left.png" 
                             alt="Previous" 
                             width={48} 
-                            height={48} 
+                            height={48} task manager
                             unoptimized 
                         />
                     </button>

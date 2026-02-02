@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section id="home" className="relative min-h-screen overflow-hidden">
       <div className="absolute inset-0 z-10">
         {/* Mobile & Tablet */}
         <div className="block md:hidden w-full h-full">

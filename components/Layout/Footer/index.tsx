@@ -4,7 +4,7 @@ import { FooterLinks } from "@/app/api/footerlinks";
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 bg-dark">
+    <footer id="contact" className="relative z-10 bg-dark">
       <div className="container mx-auto max-w-8xl pt-14 px-4 sm:px-6 lg:px-0">
         <div className="flex lg:items-center justify-between items-end lg:gap-8 pb-14 border-b border-white/10 lg:flex-nowrap flex-wrap gap-6">
           <div className="flex flex-col gap-2 lg:gap-1 lg:max-w-xs">
@@ -48,7 +48,7 @@ const Footer = () => {
               </h2>
               <h2 className="sm:hidden text-white leading-[1.2] text-[48px] sm:text-[40px] font-medium mb-10 lg:max-w-3/4">
                 Plan your perfect villa
-                Stay with us.
+                Stay with us. 
               </h2>
               <Link href="/contactus" className="bg-primary text-base font-semibold py-4 px-8 rounded-full text-white hover:bg-white hover:text-primary duration-300 hover:cursor-pointer">
                 Book Your Stay

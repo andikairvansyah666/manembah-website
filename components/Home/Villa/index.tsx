@@ -35,7 +35,7 @@ const FeaturedProperty: React.FC = () => {
 
 
   return (
-    <section>
+    <section id="villa">
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0">
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="relative">
@@ -180,7 +180,7 @@ const FeaturedProperty: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-10">
-              <Link href="/properties/classic-unit" className="py-4 px-8 bg-primary hover:bg-dark duration-300 rounded-full text-white">
+              <Link href="/properties/kelarisan-villa" className="py-4 px-8 bg-primary hover:bg-dark duration-300 rounded-full text-white">
                 View Details
               </Link>
               <div>

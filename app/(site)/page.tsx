@@ -1,20 +1,18 @@
-import FeaturedProperty from '@/components/Home/FeaturedProperty'
+import Villa from '@/components/Home/Villa'
 import Hero from '@/components/Home/Hero'
-import Services from '@/components/Home/Services'
+import AboutUs from '@/components/Home/AboutUs'
 import Testimonial from '@/components/Home/Testimonial'
-import GetInTouch from '@/components/Home/GetInTouch'
 import FAQ from '@/components/Home/FAQs'
-import Properties from '@/components/Home/Properties'
+import GuestHouse from '@/components/Home/Properties'
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Services />
-      <FeaturedProperty />
-      <Properties />
+      <AboutUs />
+      <Villa />
+      <GuestHouse />
       <Testimonial />
-      <GetInTouch />
       <FAQ />
     </main>
   )
