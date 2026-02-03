@@ -20,7 +20,7 @@ export default function Details() {
                     <div className="lg:col-span-8 col-span-12 flex flex-col gap-2 sm:gap-1.5">
                         <p className="text-dark/75 dark:text-white/75 text-sm sm:text-base font-semibold flex items-center gap-2">
                             <Icon icon="ph:house-simple-fill" className="text-xl sm:text-2xl text-primary" />
-                            Guest House
+                            {item?.type}
                         </p>
                         <h1 className='text-3xl sm:text-4xl lg:text-52 font-semibold text-dark dark:text-white leading-tight'>{item?.name}</h1>
                         <div className="flex items-start gap-2">
@@ -92,15 +92,24 @@ export default function Details() {
                         <div className="py-8 my-8 border-y border-dark/10 dark:border-white/20 flex flex-col gap-8">
                             <div className="flex items-center gap-6">
                                 <div>
-                                    <Image src="/images/SVGs/bath.svg" width={400} height={500} alt="" className='w-8 h-8 dark:hidden' unoptimized={true} />
-                                    <Image src="/images/SVGs/bath-dark.svg" width={400} height={500} alt="" className='w-8 h-8 dark:block hidden' unoptimized={true} />
+                                    {item?.iconFacility && item?.iconFacility[0] && (
+                                        <Image src={item.iconFacility[0]?.src} alt="IconFacilities" width={400} height={500} className="w-8 h-8 dark:hidden" unoptimized={true} />
+                                    )}
+                                    {item?.iconFacility && item?.iconFacility[1] && (
+                                        <Image src={item.iconFacility[1]?.src} alt="IconFacilities" width={400} height={500} className="w-8 h-8 dark:block hidden" unoptimized={true} />
+                                    )}
                                 </div>
-                                <div>
-                                    <h3 className='text-dark dark:text-white text-xm'>Modern Bathroom</h3>
-                                    <p className='text-base text-dark/50 dark:text-white/50'>
-                                        A clean, modern bathroom with complete amenities for your comfort.
-                                    </p>
-                                </div>
+                                {item?.facilityDescription.map((item, index) => (
+                                    <div key={index}>
+                                        <h3 className="text-dark dark:text-white text-xm">
+                                        {item.name}
+                                        </h3>
+                                        <p className="text-base text-dark/50 dark:text-white/50">
+                                        {item.description}
+                                        </p>
+                                    </div>
+                                ))}
+
                             </div>
                             <div className="flex items-center gap-6">
                                 <div>

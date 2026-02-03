@@ -2,6 +2,7 @@ import { PropertyHomes } from '@/types/properyHomes'
 
 export const propertyHomes: PropertyHomes[] = [
   {
+    type: 'Guest House',
     name: 'Classic Unit',
     slug: 'classic-unit',
     location: 'Brigjen Katamso, Blitar',
@@ -30,9 +31,24 @@ export const propertyHomes: PropertyHomes[] = [
       {
         src: "/images/properties/property1/image-5.jpg"
       },
+    ],
+    iconFacility: [
+      {
+        src: "/images/SVGs/bath.svg",
+      },
+      {
+        src: "/images/SVGs/bath-dark.svg"
+      },
+    ],
+    facilityDescription: [
+      {
+        name: "Modern Bathroom",
+        description: "A clean and modern bathroom with essential amenities for your comfort."
+      },
     ]
   },
   {
+    type: 'Guest House',
     name: 'Comfort Unit',
     slug: 'comfort-unit',
     location: 'Brigjen Katamso, Blitar',
@@ -60,9 +76,24 @@ export const propertyHomes: PropertyHomes[] = [
       {
         src: "/images/properties/property2/image-5.jpg"
       },
+    ],
+    iconFacility: [
+      {
+        src: "/images/SVGs/bath.svg",
+      },
+      {
+        src: "/images/SVGs/bath-dark.svg"
+      },
+    ],
+    facilityDescription: [
+      {
+        name: "Modern Bathroom",
+        description: "A clean and modern bathroom with essential amenities for your comfort."
+      },
     ]
   },
   {
+    type: 'Guest House',
     name: 'Harmony Plus',
     slug: 'harmony-plus',
     location: 'Brigjen Katamso, Blitar',
@@ -90,9 +121,24 @@ export const propertyHomes: PropertyHomes[] = [
       {
         src: "/images/properties/property3/image-5.jpg"
       },
+    ],
+    iconFacility: [
+      {
+        src: "/images/SVGs/bath.svg",
+      },
+      {
+        src: "/images/SVGs/bath-dark.svg"
+      },
+    ],
+    facilityDescription: [
+      {
+        name: "Modern Bathroom",
+        description: "A clean and modern bathroom with essential amenities for your comfort."
+      },
     ]
   },
   {
+    type: 'Villa',
     name: 'Kelarisan Villa',
     slug: 'kelarisan-villa',
     location: 'Brigjen Katamso, Blitar',
@@ -120,6 +166,20 @@ export const propertyHomes: PropertyHomes[] = [
       },
       {
         src: "/images/properties/property4/image-5.jpg"
+      },
+    ],
+    iconFacility: [
+      {
+        src: "/images/SVGs/pool.svg",
+      },
+      {
+        src: "/images/SVGs/pool-dark.svg"
+      },
+    ],
+    facilityDescription: [
+      {
+        name: "Private Pool",
+        description: "Enjoy a private pool for a relaxing and comfortable stay."
       },
     ]
   },

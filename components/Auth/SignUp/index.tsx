@@ -189,7 +189,7 @@ const SignUp = ({ signUpOpen }: { signUpOpen?: (value: boolean) => void }) => {
           <button
             type="submit"
             disabled={loading}
-            className="flex w-full cursor-pointer items-center justify-center rounded-2xl border border-primary bg-primary hover:bg-transparent hover:text-primary px-5 py-3 text-base text-white transition duration-300 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex w-full cursor-pointer items-center justify-center rounded-2xl border border-primary bg-primary hover:bg-transparent hover:text-primary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? "Signing Up..." : "Sign Up"}
           </button>

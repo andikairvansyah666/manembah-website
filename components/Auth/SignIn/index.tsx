@@ -117,7 +117,7 @@ const Signin = ({ signInOpen }: { signInOpen?: (value: boolean) => void }) => {
         <div className="mb-9">
           <button
             type="submit"
-            className="flex w-full cursor-pointer items-center justify-center rounded-2xl border border-primary bg-primary hover:bg-transparent hover:text-primary px-5 py-3 text-base text-white transition duration-300 ease-in-out "
+            className="flex w-full cursor-pointer items-center justify-center rounded-2xl border border-primary bg-primary hover:bg-transparent hover:text-primary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:scale-105 "
           >
             Sign In
           </button>

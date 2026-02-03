@@ -95,7 +95,7 @@ const Header: React.FC = () => {
                     ? 'text-white bg-primary border-primary hover:bg-white hover:text-primary'
                     : isHomepage
                       ? 'text-dark bg-white dark:text-dark hover:bg-transparent hover:text-white border-white'
-                      : 'text-white bg-[#131313] hover:bg-transparent hover:text-[#131313] border-[#131313]'
+                      : 'text-white bg-[#131313] hover:bg-transparent hover:text-[#131313] border-[#131313] dark:hover:bg-primary dark:hover:text-white'
                   }`}
                 aria-label='Toggle mobile menu'>
                 <span className='scale-90 sm:scale-100'>

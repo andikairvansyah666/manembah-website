@@ -2,14 +2,24 @@
 
 import { useState } from 'react';
 import { CustomSelect } from '@/components/ui/custom-select';
+import { useRouter } from "next/navigation";
+
 
 const BookingForm = () => {
   const [category, setCategory] = useState('');
   const [stayType, setStayType] = useState('');
   const [priceList, setPriceList] = useState('');
+  const router = useRouter();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Here you would typically handle form submission logic (e.g., API call)
+    // After successful submission, redirect to testimonial page
+    router.push('/testimonial');
+  };
 
   return (
-    <form className='w-full'>
+    <form className='w-full' onSubmit={handleSubmit}>
       <div className='flex flex-col gap-8'>
         {/* Full Name and Email Address */}
         <div className='flex flex-col lg:flex-row gap-6 w-full'>
@@ -207,9 +217,11 @@ const BookingForm = () => {
         </div>
 
         {/* Submit Button */}
-        <button className='px-8 py-4 rounded-full bg-primary text-white text-base font-semibold w-fit hover:cursor-pointer hover:bg-dark duration-300'>
-          Send message
+        
+        <button type="submit" className="px-8 py-4 rounded-full bg-primary text-white text-base font-semibold w-fit transition-all duration-300 hover:bg-dark hover:scale-105">
+          Reserve Now
         </button>
+
       </div>
     </form>
   );

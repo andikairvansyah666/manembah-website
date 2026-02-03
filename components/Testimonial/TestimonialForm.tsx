@@ -3,15 +3,22 @@
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import { CustomSelect } from '@/components/ui/custom-select';
+import { useRouter } from "next/navigation";
 
 const TestimonialForm = () => {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
   const [category, setCategory] = useState('');
   const [stayType, setStayType] = useState('');
+  const router = useRouter();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    router.push('/');
+  };
 
   return (
-    <form className='w-full'>
+    <form className='w-full' onSubmit={handleSubmit}>
       <div className='flex flex-col gap-8'>
         {/* Name and Email Row */}
         <div className='flex flex-col lg:flex-row gap-6 w-full'>
@@ -140,8 +147,8 @@ const TestimonialForm = () => {
         </div>
 
         {/* Submit Button */}
-        <button className='px-8 py-4 rounded-full bg-primary text-white text-base font-semibold w-fit hover:cursor-pointer hover:bg-dark duration-300'>
-          Submit Testimonial
+        <button className='px-8 py-4 rounded-full bg-primary text-white text-base font-semibold w-fit hover:cursor-pointer hover:bg-dark duration-300 hover:scale-105'>
+          Submit
         </button>
       </div>
     </form>

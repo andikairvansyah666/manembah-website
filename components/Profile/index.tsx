@@ -83,7 +83,7 @@ const Profile = () => {
             <div className='pt-4'>
               <button
                 type='button'
-                className='bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-dark duration-300 hover:cursor-pointer'
+                className='bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-dark duration-300 hover:cursor-pointer hover:scale-105'
               >
                 Edit Profile
               </button>
