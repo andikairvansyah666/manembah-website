@@ -50,13 +50,13 @@ export default function HeroSection() {
 
           <div className="flex flex-col xs:flex-row items-start justify-start gap-4">
             <Link
-              href="/contactus"
+              href="/#villa"
               className="px-8 py-4 bg-primary border border-primary text-white font-semibold rounded-full hover:bg-white hover:text-primary duration-300"
             >
               Book Now
             </Link>
 
-            <button className="px-8 py-4 border border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary duration-300">
+            <button className="px-8 py-4 border border-white text-white font-semibold rounded-full hover:border-primary hover:cursor-pointer hover:text-primary duration-300">
               View Details
             </button>
           </div>

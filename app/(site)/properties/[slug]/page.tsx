@@ -274,7 +274,7 @@ export default function Details() {
                             </h4>
                             <p className='text-sm text-white/50 dark:text-white'>Discounted Price</p>
                             <Link href="/booking" className='py-4 px-8 bg-primary text-white rounded-full w-full block text-center hover:bg-white duration-300 text-base mt-8 hover:cursor-pointer hover:text-primary'>
-                                Get in touch
+                                Book Now
                             </Link>
                             <div className="absolute right-0 top-4 -z-[1]">
                                 <Image src="/images/properties/vector.svg" width={400} height={500} alt="vector" unoptimized={true} />

@@ -54,7 +54,7 @@ const Footer = () => {
                 Book Your Stay
               </Link>
             </div>
-            <div className="md:col-span-4 sm:col-span-6 col-span-12 ">
+            <div className="md:col-span-4 sm:col-span-6 col-span-12 mt-10 ">
               <div className="grid grid-cols-2 gap-x-8 gap-y-4 ">
                 {FooterLinks.slice(0, 6).map((item) => (
                   <Link

@@ -85,7 +85,7 @@ const Header: React.FC = () => {
                 }`}
               >
                 <Icon icon={'ph:phone-bold'} width={24} height={24} />
-                +62 821-3145-9670
+                +62 821-3145-9670x
               </Link>
             </div>
             <div>

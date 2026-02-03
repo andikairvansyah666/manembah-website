@@ -1,8 +1,13 @@
 'use client';
 
-import { Icon } from '@iconify/react';
+import { useState } from 'react';
+import { CustomSelect } from '@/components/ui/custom-select';
 
 const BookingForm = () => {
+  const [category, setCategory] = useState('');
+  const [stayType, setStayType] = useState('');
+  const [priceList, setPriceList] = useState('');
+
   return (
     <form className='w-full'>
       <div className='flex flex-col gap-8'>
@@ -118,23 +123,16 @@ const BookingForm = () => {
             >
               Category
             </label>
-            <div className='relative'>
-              <select
-                name='category'
-                id='category'
-                className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-primary focus:outline w-full bg-transparent text-black dark:text-white appearance-none cursor-pointer'
-                defaultValue=''
-              >
-                <option value='' disabled className='text-black/50'>
-                  Select category
-                </option>
-                <option value='villa' className='text-black'>Villa</option>
-                <option value='guesthouse' className='text-black'>Guest House</option>
-              </select>
-              <div className='absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-black/50 dark:text-white/50'>
-                <Icon icon='ph:caret-down' width={20} height={20} />
-              </div>
-            </div>
+            <CustomSelect
+              name="category"
+              value={category}
+              onChange={setCategory}
+              placeholder="Select category"
+              options={[
+                { label: 'Villa', value: 'villa' },
+                { label: 'Guest House', value: 'guesthouse' },
+              ]}
+            />
           </div>
           <div className='w-full space-y-3 relative'>
             <label
@@ -143,23 +141,16 @@ const BookingForm = () => {
             >
               Stay Type
             </label>
-            <div className='relative'>
-              <select
-                name='stayType'
-                id='stayType'
-                className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-primary focus:outline w-full bg-transparent text-black dark:text-white appearance-none cursor-pointer'
-                defaultValue=''
-              >
-                <option value='' disabled className='text-black/50'>
-                  Select your stay
-                </option>
-                <option value='short-term' className='text-black'>Short Term</option>
-                <option value='long-term' className='text-black'>Long Term</option>
-              </select>
-              <div className='absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-black/50 dark:text-white/50'>
-                <Icon icon='ph:caret-down' width={20} height={20} />
-              </div>
-            </div>
+            <CustomSelect
+              name="stayType"
+              value={stayType}
+              onChange={setStayType}
+              placeholder="Select your stay"
+              options={[
+                { label: 'Short Term', value: 'short-term' },
+                { label: 'Long Term', value: 'long-term' },
+              ]}
+            />
           </div>
           <div className='w-full space-y-3 relative'>
             <label
@@ -168,24 +159,16 @@ const BookingForm = () => {
             >
               Price List
             </label>
-            <div className='relative'>
-              <select
-                name='priceList'
-                id='priceList'
-                className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-primary focus:outline w-full bg-transparent text-black dark:text-white appearance-none cursor-pointer'
-                defaultValue=''
-              >
-                <option value='' disabled className='text-black/50'>
-                  IDR / Night
-                </option>
-                 {/* Placeholder options */}
-                <option value='low' className='text-black'>Low</option>
-                <option value='high' className='text-black'>High</option>
-              </select>
-              <div className='absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-black/50 dark:text-white/50'>
-                <Icon icon='ph:caret-down' width={20} height={20} />
-              </div>
-            </div>
+            <CustomSelect
+              name="priceList"
+              value={priceList}
+              onChange={setPriceList}
+              placeholder="IDR / Night"
+              options={[
+                { label: 'Low', value: 'low' },
+                { label: 'High', value: 'high' },
+              ]}
+            />
           </div>
         </div>
 
