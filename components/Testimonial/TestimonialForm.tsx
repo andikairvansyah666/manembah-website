@@ -5,11 +5,16 @@ import { useState } from 'react';
 import { CustomSelect } from '@/components/ui/custom-select';
 import { useRouter } from "next/navigation";
 
-const TestimonialForm = () => {
+interface TestimonialFormProps {
+  initialCategory?: string;
+  initialType?: string;
+}
+
+const TestimonialForm = ({ initialCategory = '', initialType = '' }: TestimonialFormProps) => {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
-  const [category, setCategory] = useState('');
-  const [stayType, setStayType] = useState('');
+  const [category, setCategory] = useState(initialCategory);
+  const [type, setType] = useState(initialType);
   const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -58,7 +63,7 @@ const TestimonialForm = () => {
           </div>
         </div>
 
-        {/* Category and Stay Type Row */}
+        {/* Category and Type Row */}
         <div className='flex flex-col lg:flex-row gap-6 w-full'>
           <div className='w-full space-y-3 relative'>
             <label
@@ -67,34 +72,58 @@ const TestimonialForm = () => {
             >
               Category
             </label>
-            <CustomSelect
-              name="category"
-              value={category}
-              onChange={setCategory}
-              placeholder="Select category"
-              options={[
-                { label: 'Villa', value: 'villa' },
-                { label: 'Guest House', value: 'guesthouse' },
-              ]}
-            />
+            {initialCategory ? (
+              <input
+                type='text'
+                name='category'
+                id='category'
+                value={category}
+                readOnly
+                className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-primary focus:outline w-full bg-transparent text-black dark:text-white cursor-not-allowed'
+              />
+            ) : (
+              <CustomSelect
+                name="category"
+                value={category}
+                onChange={setCategory}
+                placeholder="Select category"
+                options={[
+                  { label: 'Villa', value: 'Villa' },
+                  { label: 'Guest House', value: 'Guest House' },
+                ]}
+              />
+            )}
           </div>
           <div className='w-full space-y-3 relative'>
             <label
-              htmlFor='stayType'
+              htmlFor='type'
               className='block mb-2 text-base font-medium text-black dark:text-white'
             >
-              Stay Type
+              Type
             </label>
-            <CustomSelect
-              name="stayType"
-              value={stayType}
-              onChange={setStayType}
-              placeholder="Select your stay"
-              options={[
-                { label: 'Short Term', value: 'short-term' },
-                { label: 'Long Term', value: 'long-term' },
-              ]}
-            />
+            {initialType ? (
+              <input
+                type='text'
+                name='type'
+                id='type'
+                value={type}
+                readOnly
+                className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-primary focus:outline w-full bg-transparent text-black dark:text-white cursor-not-allowed'
+              />
+            ) : (
+              <CustomSelect
+                name="type"
+                value={type}
+                onChange={setType}
+                placeholder="Select type"
+                options={[
+                  { label: 'Classic Unit', value: 'Classic Unit' },
+                  { label: 'Comfort Unit', value: 'Comfort Unit' },
+                  { label: 'Harmony Plus', value: 'Harmony Plus' },
+                  { label: 'Kelarisan Villa', value: 'Kelarisan Villa' },
+                ]}
+              />
+            )}
           </div>
         </div>
 

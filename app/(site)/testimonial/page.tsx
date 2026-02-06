@@ -1,13 +1,17 @@
+'use client';
+
 import { Icon } from '@iconify/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import TestimonialForm from '@/components/Testimonial/TestimonialForm'
-import { Metadata } from "next";
-export const metadata: Metadata = {
-    title: "Testimonial | Manembah",
-};
+import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
-export default function Testimonial() {
+function TestimonialContent() {
+  const searchParams = useSearchParams();
+  const category = searchParams.get('category') || '';
+  const type = searchParams.get('type') || '';
+
   return (
     <div className='container max-w-8xl mx-auto px-5 2xl:px-0 pt-32 md:pt-44 pb-14 md:pb-28'>
       <div className='mb-16'>
@@ -50,7 +54,7 @@ export default function Testimonial() {
                 Contact information
               </h5>
               <p className='text-sm xs:text-base mobile:text-xm font-normal text-white/80'>
-                Ready to find your dream home or sell your property? We’re here
+                Ready to find your dream home or sell your property? We&apos;re here
                 to help!
               </p>
             </div>
@@ -86,10 +90,22 @@ export default function Testimonial() {
             </div>
           </div>
           <div className='flex-1/2'>
-            <TestimonialForm />
+            <TestimonialForm 
+              initialCategory={category}
+              initialType={type}
+            />
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
+
+export default function Testimonial() {
+  return (
+    <Suspense fallback={<div className='container max-w-8xl mx-auto px-5 2xl:px-0 pt-32 md:pt-44 pb-14 md:pb-28 text-center'>Loading...</div>}>
+      <TestimonialContent />
+    </Suspense>
+  );
+}
+

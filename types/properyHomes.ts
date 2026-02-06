@@ -4,6 +4,7 @@ export type PropertyHomes = {
   slug: string
   location: string
   detailLocation: string
+  price: string
   rate: string
   beds: number
   baths: number

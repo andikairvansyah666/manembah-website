@@ -1,13 +1,16 @@
+'use client';
 
 import { Icon } from '@iconify/react'
-import { Metadata } from "next";
 import BookingForm from '@/components/Booking/BookingForm';
+import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
-export const metadata: Metadata = {
-    title: "Booking | Manembah",
-};
+function BookingContent() {
+  const searchParams = useSearchParams();
+  const category = searchParams.get('category') || '';
+  const type = searchParams.get('type') || '';
+  const price = searchParams.get('price') || '';
 
-export default function Booking() {
   return (
     <div className='container max-w-8xl mx-auto px-5 2xl:px-0 pt-32 md:pt-44 pb-14 md:pb-28'>
       <div className='mb-16'>
@@ -35,8 +38,20 @@ export default function Booking() {
       </div>
       {/* form */}
       <div className='border border-black/10 dark:border-white/10 rounded-2xl p-4 sm:p-10 shadow-xl dark:shadow-white/10 max-w-5xl mx-auto'>
-        <BookingForm />
+        <BookingForm 
+          initialCategory={category}
+          initialType={type}
+          initialPrice={price}
+        />
       </div>
     </div>
-  )
+  );
+}
+
+export default function Booking() {
+  return (
+    <Suspense fallback={<div className='container max-w-8xl mx-auto px-5 2xl:px-0 pt-32 md:pt-44 pb-14 md:pb-28 text-center'>Loading...</div>}>
+      <BookingContent />
+    </Suspense>
+  );
 }
