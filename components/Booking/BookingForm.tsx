@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { CustomSelect } from '@/components/ui/custom-select';
 import { useRouter } from "next/navigation";
 import PaymentModal from './PaymentModal';
+import { propertyHomes } from '@/app/api/propertyhomes';
 
 interface BookingFormProps {
   initialCategory?: string;
@@ -283,6 +284,7 @@ const BookingForm = ({ initialCategory = '', initialType = '', initialPrice = ''
             checkOut: formatDate(checkOutDate),
         }}
         onPaymentComplete={handlePaymentComplete}
+        propertyImage={propertyHomes.find(p => p.name === type)?.images[2]?.src}
     />
     </>
   );

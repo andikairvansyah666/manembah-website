@@ -135,7 +135,7 @@ export default function HeroSection() {
             <p className="text-xl sm:text-3xl font-medium">
               650K / Day
             </p>
-            <p className="text-sm opacity-60">
+            <p className="text-sm sm:text-base opacity-60">
               For selling price
             </p>
           </div>

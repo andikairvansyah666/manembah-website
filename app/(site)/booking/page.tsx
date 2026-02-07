@@ -24,7 +24,7 @@ function BookingContent() {
             />
           </span>
           <p className='text-base font-semibold text-badge dark:text-white/90'>
-            Booking Villa
+            Booking
           </p>
         </div>
         <div className='text-center'>

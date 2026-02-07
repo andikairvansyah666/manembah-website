@@ -18,11 +18,12 @@ interface PaymentModalProps {
     totalPrice?: string;
   };
   onPaymentComplete: () => void;
+  propertyImage?: string;
 }
 
 type PaymentMethod = 'qris' | 'bank' | 'card' | null;
 
-const PaymentModal = ({ isOpen, onClose, bookingDetails, onPaymentComplete }: PaymentModalProps) => {
+const PaymentModal = ({ isOpen, onClose, bookingDetails, onPaymentComplete, propertyImage }: PaymentModalProps) => {
   const [step, setStep] = useState<'confirmation' | 'success'>('confirmation');
   const [selectedMethod, setSelectedMethod] = useState<PaymentMethod>(null);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -58,7 +59,7 @@ const PaymentModal = ({ isOpen, onClose, bookingDetails, onPaymentComplete }: Pa
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200 ">
       <div className="bg-white dark:bg-dark w-full max-w-2xl rounded-[18px] shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200 flex flex-col max-h-[90vh]">
         
         {/* Header */}
@@ -99,7 +100,7 @@ const PaymentModal = ({ isOpen, onClose, bookingDetails, onPaymentComplete }: Pa
                 {step === 'success' && (
                      <div className="w-full md:w-1/3 aspect-[4/3] rounded-2xl overflow-hidden relative">
                          <Image 
-                            src="/images/properties/property4/mainvilla1.jpg" // Fallback/Placeholder
+                            src={propertyImage || "/images/properties/property4/mainvilla1.jpg"}
                             alt="Property"
                             layout="fill"
                             objectFit="cover"
