@@ -21,20 +21,20 @@ const historyData: BookingHistoryItem[] = [
     title: 'Villa',
     name: 'Kelarisan Villa',
     price: 'IDR 650,000,00',
-    checkIn: 'Jully 10, 2024',
-    checkOut: 'Jully 12, 2024',
+    checkIn: 'July 10, 2025',
+    checkOut: 'July 11, 2025',
     status: 'Completed',
-    image: '/images/property/property-1.jpg', 
+    image: '/images/properties/property4/image-history.jpg', 
   },
   {
     id: 2,
     title: 'Guest House',
     name: 'Comfort Unit',
-    price: 'IDR 650,000,00',
-    checkIn: 'September 20, 2025',
-    checkOut: 'September 26, 2025',
+    price: 'IDR 350,000,00',
+    checkIn: 'September 20, 2026',
+    checkOut: 'September 21, 2026',
     status: 'Completed',
-    image: '/images/property/property-2.jpg',
+    image: '/images/properties/property2/image-history.jpg',
   },
 ];
 
@@ -78,7 +78,13 @@ const HistoryCard = ({ item }: { item: BookingHistoryItem }) => {
              <span>{item.status}</span>
            </div>
            
-           <Link href="/testimonial" className='px-6 py-3 bg-[#B0914F] hover:bg-[#977c43] text-white rounded-full font-medium transition-colors text-sm'>
+           <Link
+             href={{
+               pathname: '/testimonial',
+               query: { category: item.title, type: item.name },
+             }}
+             className='px-6 py-3 bg-[#B0914F] hover:bg-[#977c43] text-white rounded-full font-medium transition-colors text-sm'
+           >
              Add Testimonial
            </Link>
         </div>
